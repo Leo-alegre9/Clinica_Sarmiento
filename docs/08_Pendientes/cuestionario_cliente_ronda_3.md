@@ -1,6 +1,7 @@
 # Cuestionario para el cliente — Ronda 3
 
-**Estado: ARMADO el 2026-09-24, pendiente de envío.** 29 preguntas en 4 bloques, más una lista
+**Estado: ARMADO el 2026-09-24, pendiente de envío.** Versión interactiva: https://claude.ai/artifact/Brjz6CJvDBumjYfFqVNVx6
+(las respuestas se guardan en su base de datos, documento `respuestas/ronda-3-cliente`). 29 preguntas en 4 bloques, más una lista
 de documentos a pedir (bloque 5).
 
 Esta ronda junta, en un solo envío, todo lo que falta relevar hoy:
