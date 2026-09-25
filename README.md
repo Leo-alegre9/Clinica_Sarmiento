@@ -1,580 +1,517 @@
 # 🏥 Clínica Sarmiento
 
-Sistema de gestión clínica orientado a la administración integral de una clínica y consultorio oftalmológico.
+Sistema integral de gestión desarrollado para **Clínica Sarmiento**, orientado a centralizar y optimizar la administración de pacientes, turnos, historias clínicas, profesionales, caja, operaciones y documentación médica.
 
-> 🚧 **Proyecto en desarrollo**  
-> Esta nueva versión se está construyendo desde cero utilizando una arquitectura moderna, escalable y mantenible.
-
----
-
-## 📋 Acerca del proyecto
-
-**Clínica Sarmiento** tiene como objetivo centralizar la gestión clínica y administrativa de pacientes, profesionales y consultas oftalmológicas en una única plataforma.
-
-El sistema será desarrollado progresivamente por módulos, priorizando:
-
-- 🔐 Seguridad de la información
-- 🩺 Trazabilidad de la historia clínica
-- ⚡ Rendimiento
-- 📈 Escalabilidad
-- 🎨 Buena experiencia de usuario
-- 🧩 Arquitectura mantenible
-- 🧪 Testing automatizado
-- 🐳 Facilidad de despliegue
-- 📚 Documentación técnica
+El proyecto busca reemplazar procesos manuales y sistemas anteriores mediante una plataforma web moderna, escalable y preparada para acompañar el crecimiento de la clínica.
 
 ---
 
-## 🚧 Estado del proyecto
+## 📌 Descripción
 
-**Fase actual:** Preparación inicial del entorno y arquitectura.
+**Clínica Sarmiento** es una aplicación web de gestión médica desarrollada principalmente para una clínica oftalmológica.
 
-Este repositorio corresponde a una nueva implementación de **Clínica Sarmiento**, desarrollada completamente desde cero.
+El sistema permite administrar desde una única plataforma diferentes áreas de la institución, facilitando el trabajo del personal administrativo y de los profesionales médicos.
 
-La versión anterior del sistema se conservará únicamente como **referencia funcional**, sin reutilizar directamente su arquitectura ni código.
+Entre sus principales objetivos se encuentran:
+
+- Centralizar la información de los pacientes.
+- Digitalizar las historias clínicas.
+- Mejorar la gestión de turnos.
+- Facilitar el seguimiento de consultas y tratamientos.
+- Administrar ingresos, gastos y movimientos de caja.
+- Gestionar documentación y archivos médicos.
+- Organizar operaciones y procedimientos.
+- Proporcionar interfaces específicas según el rol del usuario.
 
 ---
 
-## 🧱 Stack tecnológico
+## 🚀 Tecnologías utilizadas
 
 ### Backend
 
-- PHP 8.4+
-- Laravel 13
+- **PHP 8.4**
+- **Laravel**
+- **Laravel Fortify**
+- **Inertia.js**
+- **Pest / PHPUnit**
+- **Larastan**
+- **Laravel Pint**
 
 ### Frontend
 
-- React
-- TypeScript
-- Inertia
-- Tailwind CSS
-- shadcn/ui
-- Vite
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **shadcn/ui**
+- **Radix UI**
+- **Vite**
 
 ### Base de datos
 
-- PostgreSQL
+Actualmente el proyecto utiliza:
 
-### Infraestructura
+- **SQLite** para el entorno inicial de desarrollo.
 
-- Docker
-- Docker Compose
-- Nginx
-- Redis
-- VPS Linux
+La arquitectura está preparada para trabajar posteriormente con una base de datos relacional destinada al entorno productivo.
 
-### Desarrollo y calidad
+### Herramientas
 
 - Git
 - GitHub
-- Laravel Pint
-- ESLint
-- Testing automatizado
-- CI/CD
+- Composer
+- Node.js
+- npm
+- Docker
+- Laravel Herd
+- WSL
 
 ---
 
-## 🏗️ Arquitectura prevista
+## 🧩 Módulos principales
 
-```text
-Usuario
-   │
-   ▼
-React + TypeScript
-   │
-   ▼
-Inertia
-   │
-   ▼
-Laravel
-   │
-   ├── Autenticación
-   ├── Autorización
-   ├── Lógica de negocio
-   ├── Validaciones
-   ├── Servicios
-   ├── Jobs
-   └── Notificaciones
-   │
-   ▼
-PostgreSQL
-```
+### 👤 Gestión de pacientes
 
-Posteriormente la infraestructura será complementada con:
+Permite registrar y administrar la información de los pacientes de la clínica.
 
-```text
-Docker Compose
-│
-├── Laravel / PHP
-├── Nginx
-├── PostgreSQL
-├── Redis
-└── Queue Worker
-```
+Incluye funcionalidades como:
+
+- Alta de pacientes.
+- Modificación de datos.
+- Consulta de información.
+- Historial de atención.
+- Información de contacto.
+- Documentación asociada.
 
 ---
 
-## 🧩 Módulos previstos
+### 📅 Gestión de turnos
 
-El sistema será construido progresivamente e incluirá módulos como:
+Sistema de agenda destinado a organizar las consultas de los profesionales.
 
-### 👤 Usuarios
+Contempla:
 
-- Gestión de usuarios
-- Autenticación
-- Roles
-- Permisos
-- Control de acceso
+- Creación de turnos.
+- Reprogramación.
+- Cancelación.
+- Agenda por profesional.
+- Estados de los turnos.
+- Control de llegada de pacientes.
+- Reorganización de la agenda.
+- Automatización de avisos y recordatorios.
 
-### 👨‍⚕️ Profesionales
+---
 
-- Médicos
-- Especialidades
-- Disponibilidad
-- Horarios de atención
+### 🩺 Historia clínica
 
-### 🧑 Pacientes
+Cada paciente dispone de una historia clínica digital.
 
-- Alta de pacientes
-- Datos personales
-- Datos de contacto
-- Información clínica
-- Antecedentes
-- Búsqueda y filtros
+Los profesionales podrán registrar:
 
-### 📅 Turnos
+- Consultas.
+- Diagnósticos.
+- Observaciones.
+- Estudios.
+- Tratamientos.
+- Evolución del paciente.
+- Indicaciones médicas.
 
-- Agenda
-- Calendario
-- Asignación de turnos
-- Estados
-- Reprogramaciones
-- Cancelaciones
-- Historial
+---
 
-### 🩺 Consultas oftalmológicas
+### 📄 Archivos del paciente
 
-- Motivo de consulta
-- Antecedentes
-- Evaluación oftalmológica
-- Evoluciones
-- Diagnósticos
-- Indicaciones
-- Conductas médicas
+El sistema permitirá adjuntar y administrar documentación relacionada con cada paciente.
 
-### 📖 Historia clínica
+Por ejemplo:
 
-- Historial de consultas
-- Diagnósticos
-- Antecedentes
-- Recetas
-- Estudios
-- Archivos
-- Evolución clínica
+- Estudios.
+- Informes.
+- Resultados.
+- Imágenes.
+- Documentación médica.
+- Archivos complementarios.
+
+---
 
 ### 💊 Recetas
 
-- Recetas médicas
-- Recetas ópticas
-- Generación de documentos
-- Impresión
-- Exportación PDF
+Los profesionales podrán generar y registrar recetas asociadas a las consultas de los pacientes.
 
-### 🔬 Estudios
-
-- Registro de estudios
-- Resultados
-- Imágenes
-- Documentación adjunta
-- Seguimiento
-
-### 📊 Administración
-
-- Dashboard
-- Estadísticas
-- Reportes
-- Auditoría
-- Configuración general
-
-### 🔔 Notificaciones
-
-- Recordatorios
-- Avisos de turnos
-- Email
-- Integraciones futuras
+Las recetas quedarán vinculadas a la historia clínica correspondiente.
 
 ---
 
-# 🗺️ Roadmap
+### 👨‍⚕️ Gestión de profesionales
 
-## ✅ Fase 0 — Preparación
+El sistema contará con diferentes médicos que podrán acceder a funcionalidades específicas.
 
-Configuración del entorno de desarrollo.
+Cada profesional podrá administrar:
 
-- PHP
-- Composer
-- Node.js
-- NPM
-- Git
-- GitHub
-- Claude Code
-- Entorno Laravel
-
----
-
-## 🔄 Fase 1 — Base del proyecto
-
-Creación de la aplicación utilizando:
-
-- Laravel
-- React
-- TypeScript
-- Inertia
-- Tailwind CSS
-- shadcn/ui
-- Vite
-
-También se configurarán:
-
-- estructura inicial;
-- variables de entorno;
-- testing;
-- linting;
-- documentación;
-- Git.
+- Su agenda.
+- Sus pacientes.
+- Historias clínicas.
+- Consultas.
+- Recetas.
+- Estudios.
+- Procedimientos.
 
 ---
 
-## 🗄️ Fase 2 — PostgreSQL
+### 💰 Caja
 
-Configuración del motor de base de datos.
+Módulo destinado al registro y control de movimientos económicos.
 
-Se definirán:
+Permitirá gestionar:
 
-- conexión con Laravel;
-- entorno local;
-- convenciones;
-- migraciones;
-- claves;
-- índices;
-- restricciones.
+- Ingresos.
+- Egresos.
+- Pagos de consultas.
+- Gastos.
+- Movimientos diarios.
+- Control de caja.
 
 ---
 
-## 🧠 Fase 3 — Arquitectura del dominio clínico
+### 💵 Valores de consultas
 
-Se diseñará el modelo de negocio antes de comenzar los módulos principales.
+El sistema permitirá configurar los diferentes valores correspondientes a las consultas y prestaciones realizadas dentro de la clínica.
 
-Entidades iniciales:
+---
+
+### 🏥 Operaciones y procedimientos
+
+Permitirá registrar procedimientos u operaciones médicas.
+
+Se podrá administrar:
+
+- Paciente.
+- Profesional responsable.
+- Tipo de operación.
+- Fecha.
+- Estado.
+- Observaciones.
+- Información relacionada al procedimiento.
+
+---
+
+### 📊 Administración general
+
+Los usuarios administrativos dispondrán de herramientas para supervisar la actividad general de la clínica.
+
+Entre ellas:
+
+- Gestión de profesionales.
+- Gestión de pacientes.
+- Control de gastos.
+- Gastos asociados por médico.
+- Valores de consultas.
+- Movimientos económicos.
+- Operaciones.
+- Reportes generales.
+
+---
+
+## 👥 Roles del sistema
+
+La aplicación está diseñada para trabajar con diferentes niveles de acceso.
+
+### Administrador
+
+Acceso general al sistema y a la configuración de la clínica.
+
+### Administrativo
+
+Gestión de:
+
+- Pacientes.
+- Turnos.
+- Caja.
+- Pagos.
+- Documentación.
+- Operaciones.
+
+### Médico
+
+Acceso principalmente a:
+
+- Agenda.
+- Pacientes.
+- Historias clínicas.
+- Consultas.
+- Recetas.
+- Estudios.
+- Procedimientos.
+
+Los permisos específicos serán controlados según el rol asignado a cada usuario.
+
+---
+
+## 🏗️ Arquitectura
+
+El proyecto utiliza una arquitectura web moderna basada en:
 
 ```text
-Usuario
-Médico
-Paciente
-Turno
-Consulta
-Historia Clínica
-Diagnóstico
-Receta
-Antecedente
-Estudio
-Archivo
-```
-
-También se definirán:
-
-- relaciones;
-- cardinalidades;
-- claves foráneas;
-- restricciones;
-- índices;
-- auditoría;
-- timestamps;
-- estrategia de eliminación.
-
----
-
-## 🔐 Fase 4 — Seguridad
-
-Implementación de:
-
-- autenticación;
-- roles;
-- permisos;
-- Laravel Policies;
-- Middleware;
-- validaciones;
-- sesiones;
-- auditoría.
-
----
-
-## 👤 Fase 5 — Pacientes
-
-Desarrollo completo del módulo de pacientes.
-
----
-
-## 📅 Fase 6 — Turnos
-
-Desarrollo de agenda, calendario y administración de turnos.
-
----
-
-## 🩺 Fase 7 — Consulta oftalmológica
-
-Implementación del flujo clínico para la atención de pacientes.
-
----
-
-## 📖 Fase 8 — Historia clínica
-
-Construcción de la historia clínica longitudinal del paciente.
-
----
-
-## 💊 Fase 9 — Recetas y documentos
-
-Implementación de recetas, órdenes, informes e impresión.
-
----
-
-## 🎨 Fase 10 — UX/UI avanzada
-
-Desarrollo de una interfaz moderna y profesional.
-
-Se trabajará en:
-
-- Dashboard
-- Sidebar
-- Navegación
-- Tablas
-- Formularios
-- Filtros
-- Buscadores
-- Calendarios
-- Modales
-- Notificaciones visuales
-- Responsive Design
-- Dark Mode
-
----
-
-## ⚙️ Fase 11 — Procesos en segundo plano
-
-Implementación de:
-
-- Redis
-- Queues
-- Jobs
-- Laravel Scheduler
-- Emails
-- Notificaciones
-- Recordatorios
-
----
-
-## 📁 Fase 12 — Gestión de archivos
-
-Administración segura de:
-
-- imágenes;
-- estudios;
-- documentos;
-- PDFs;
-- archivos clínicos.
-
----
-
-## 🐳 Fase 13 — Docker
-
-Contenerización de la aplicación utilizando:
-
-- Docker
-- Docker Compose
-- Laravel / PHP
-- PostgreSQL
-- Redis
-- Nginx
-- Workers
-
----
-
-## 🧪 Fase 14 — Testing y seguridad avanzada
-
-Implementación de:
-
-- Unit Tests
-- Feature Tests
-- Tests de autorización
-- Tests de reglas de negocio
-- Seguridad de archivos
-- Rate Limiting
-- Logs
-- Auditoría
-
----
-
-## 🚀 Fase 15 — Producción
-
-Despliegue definitivo mediante:
-
-- VPS Linux
-- Docker
-- Nginx
-- HTTPS
-- Dominio
-- DNS
-- Firewall
-- Backups
-- Monitoreo
-- Logs
-- GitHub
-- CI/CD
-
----
-
-# 🌐 Comunicación Frontend / Backend
-
-La aplicación web utilizará:
-
-```text
-React
-   │
-   ▼
-Inertia
-   │
-   ▼
 Laravel
+   │
+   ├── Backend
+   │
+   ├── API / lógica de negocio
+   │
+   └── Persistencia
+          │
+       Base de datos
+
+Laravel + Inertia
+          │
+        React
+          │
+      TypeScript
+          │
+      Tailwind CSS
 ```
 
-Por lo tanto, inicialmente no será necesario crear una API REST exclusivamente para comunicar React con Laravel.
+Laravel se encarga principalmente de la lógica de negocio, autenticación, persistencia y seguridad.
 
-Las APIs serán incorporadas cuando sean necesarias para:
+React junto con TypeScript proporciona una interfaz de usuario dinámica y mantenible.
 
-- aplicaciones móviles;
-- integraciones externas;
-- servicios de terceros;
-- automatizaciones;
-- WhatsApp;
-- otros sistemas.
+Inertia.js permite integrar Laravel y React sin necesidad de mantener una API REST independiente para toda la aplicación.
 
 ---
 
-# 🔐 Seguridad
-
-Debido a que el sistema administrará información clínica, la seguridad será considerada desde el diseño.
-
-Entre las medidas previstas se encuentran:
-
-- autenticación segura;
-- autorización basada en roles;
-- Laravel Policies;
-- validación de información;
-- protección de datos sensibles;
-- auditoría de acciones;
-- protección de archivos;
-- gestión segura de sesiones;
-- logs;
-- backups;
-- HTTPS;
-- variables de entorno.
-
-> ⚠️ Nunca deben almacenarse contraseñas, credenciales, tokens, claves API ni archivos `.env` dentro del repositorio.
-
----
-
-# 📂 Documentación
-
-La documentación técnica será almacenada progresivamente dentro del directorio:
+## 📂 Estructura general
 
 ```text
-docs/
-```
-
-La estructura prevista será similar a:
-
-```text
-docs/
-├── architecture/
+clinica_sarmiento/
+│
+├── app/
+│   ├── Http/
+│   ├── Models/
+│   ├── Services/
+│   └── ...
+│
 ├── database/
-├── development/
-├── deployment/
-├── security/
-└── phases/
+│   ├── factories/
+│   ├── migrations/
+│   └── seeders/
+│
+├── resources/
+│   ├── css/
+│   └── js/
+│       ├── components/
+│       ├── layouts/
+│       ├── pages/
+│       └── ...
+│
+├── routes/
+│
+├── tests/
+│
+├── public/
+│
+├── Docs/
+│
+├── composer.json
+├── package.json
+└── README.md
 ```
 
-Se documentarán:
-
-- decisiones arquitectónicas;
-- modelo de datos;
-- fases de implementación;
-- infraestructura;
-- seguridad;
-- deployment;
-- integraciones;
-- procedimientos técnicos.
-
 ---
 
-# 🧪 Testing
+## 📚 Documentación
 
-Se incorporarán pruebas automatizadas progresivamente.
-
-Las áreas críticas tendrán especial cobertura:
-
-- autenticación;
-- autorización;
-- pacientes;
-- turnos;
-- consultas;
-- historia clínica;
-- recetas;
-- reglas de negocio;
-- seguridad.
-
----
-
-# 📌 Principios de desarrollo
-
-Durante todo el proyecto se priorizarán:
-
-- Clean Code
-- Convenciones oficiales de Laravel
-- Código mantenible
-- TypeScript
-- Componentes React reutilizables
-- Separación de responsabilidades
-- Commits descriptivos
-- Documentación técnica
-- Testing automatizado
-- Seguridad por diseño
-- Variables sensibles mediante `.env`
-- Evitar abstracciones innecesarias
-
----
-
-# ⚙️ Instalación
-
-Las instrucciones para instalar y ejecutar el proyecto serán agregadas una vez finalizada la configuración inicial de Laravel.
-
----
-
-# 📈 Estado
+El proyecto mantiene documentación adicional dentro del directorio:
 
 ```text
-Fase 0     ██████████ Preparación
-Fase 1     ░░░░░░░░░░ Laravel
-Fase 2     ░░░░░░░░░░ PostgreSQL
-Fase 3     ░░░░░░░░░░ Arquitectura clínica
-Fase 4     ░░░░░░░░░░ Seguridad
-Fase 5+    ░░░░░░░░░░ Módulos
+/Docs
 ```
+
+Allí se documentan aspectos como:
+
+- Alcance del sistema.
+- Requisitos funcionales.
+- Requisitos no funcionales.
+- Historias de usuario.
+- Casos de uso.
+- Reglas de negocio.
+- Diagramas.
+- Arquitectura.
+- Decisiones técnicas.
+- Trazabilidad de requerimientos.
+- Planificación por fases.
+
+---
+
+## 🔄 Metodología de desarrollo
+
+El proyecto se desarrolla de manera incremental mediante diferentes fases.
+
+Cada fase puede incluir:
+
+1. Definición de alcance.
+2. Diseño funcional.
+3. Modelado de datos.
+4. Implementación.
+5. Pruebas.
+6. Documentación.
+7. Integración.
+8. Revisión.
+
+También se utilizan ramas de Git para separar diferentes etapas del desarrollo.
+
+Ejemplo:
+
+```bash
+setup/fase-1-laravel
+```
+
+---
+
+## ⚙️ Instalación
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/leo-alegre9/clinica_sarmiento.git
+```
+
+### 2. Ingresar al proyecto
+
+```bash
+cd clinica_sarmiento
+```
+
+### 3. Instalar dependencias de PHP
+
+```bash
+composer install
+```
+
+### 4. Instalar dependencias de JavaScript
+
+```bash
+npm install
+```
+
+### 5. Crear archivo de entorno
+
+```bash
+cp .env.example .env
+```
+
+### 6. Generar la clave de Laravel
+
+```bash
+php artisan key:generate
+```
+
+### 7. Configurar la base de datos
+
+Modificar las variables correspondientes dentro del archivo:
+
+```text
+.env
+```
+
+### 8. Ejecutar migraciones
+
+```bash
+php artisan migrate
+```
+
+### 9. Iniciar el frontend
+
+```bash
+npm run dev
+```
+
+### 10. Iniciar Laravel
+
+```bash
+php artisan serve
+```
+
+---
+
+## 🧪 Verificaciones
+
+### TypeScript
+
+```bash
+npx tsc --noEmit
+```
+
+### Build de producción
+
+```bash
+npm run build
+```
+
+### Tests
+
+```bash
+php artisan test
+```
+
+### Formateo de código PHP
+
+```bash
+./vendor/bin/pint
+```
+
+---
+
+## 🎯 Objetivo del proyecto
+
+Construir una solución moderna y centralizada que permita mejorar la gestión diaria de **Clínica Sarmiento**, reducir tareas manuales y proporcionar una plataforma preparada para incorporar nuevas funcionalidades en el futuro.
+
+El sistema está pensado para evolucionar progresivamente hacia una solución integral de gestión clínica.
+
+---
+
+## 🔮 Funcionalidades futuras
+
+Algunas funcionalidades previstas para futuras fases incluyen:
+
+- Notificaciones automáticas de turnos.
+- Recordatorios a pacientes.
+- Reportes administrativos.
+- Estadísticas.
+- Dashboard de indicadores.
+- Auditoría de operaciones.
+- Gestión avanzada de permisos.
+- Exportación de reportes.
+- Integración con servicios externos.
+- Mejoras en seguridad.
+- Backups automáticos.
+- Monitoreo del sistema.
+
+---
+
+## 🔐 Seguridad
+
+El proyecto contempla buenas prácticas relacionadas con:
+
+- Autenticación de usuarios.
+- Autorización basada en roles.
+- Validación de datos.
+- Protección de rutas.
+- Gestión segura de sesiones.
+- Control de acceso a información médica.
+- Registro de acciones sensibles.
+
+Debido a la naturaleza de la información administrada, la seguridad y privacidad de los datos constituyen uno de los principales aspectos del sistema.
+
+---
+
+## 📄 Estado del proyecto
+
+> 🚧 **Proyecto actualmente en desarrollo**
+
+La arquitectura, funcionalidades y documentación pueden modificarse a medida que avance la implementación de las diferentes fases.
 
 ---
 
 ## 📄 Licencia
 
-Proyecto privado.
+Este proyecto fue desarrollado para **Clínica Sarmiento**.
 
-**Clínica Sarmiento — Todos los derechos reservados.**
+Su código y documentación son de uso privado salvo autorización expresa del propietario del proyecto.
