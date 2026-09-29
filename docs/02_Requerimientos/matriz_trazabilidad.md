@@ -28,7 +28,7 @@ esté construido — hoy, todo el dominio clínico/administrativo. Se completan 
 | RC-011 | RNF-BCK-001 | MOD-037 | — | — | — | — | PENDIENTE | PENDIENTE | IDENTIFICADO — bloqueado por INV-006 |
 | RC-012 | RF-PUB-003 | MOD-033 | — | — | — | — | PENDIENTE | PENDIENTE | IDENTIFICADO |
 | RC-013 | (ADR) | — | — | — | — | — | — | — | ADR-001 PROPUESTO/PENDIENTE |
-| (análisis) | RF-PAC-001 a RF-PAC-021 | MOD-001 | HU-PAC-001 a HU-PAC-016 | CU-PAC-001 a CU-PAC-005 | RN-PAC-001 a RN-PAC-011 | Ver `03_Modulos/MOD-001_Pacientes/criterios_aceptacion.md` | PENDIENTE | PENDIENTE | CONFIRMADO — módulo `APROBADO` (2026-09-24). Detalle completo en `03_Modulos/MOD-001_Pacientes/trazabilidad.md`. `RF-PAC-012`/`RN-PAC-006` (unificación) y `RN-PAC-011` siguen `PROPUESTO` |
+| (análisis) | RF-PAC-001 a RF-PAC-022 (RF-PAC-022 por CR-001) | MOD-001 | HU-PAC-001 a HU-PAC-016 | CU-PAC-001 a CU-PAC-005 | RN-PAC-001 a RN-PAC-011 | Ver `03_Modulos/MOD-001_Pacientes/criterios_aceptacion.md` | PENDIENTE | PENDIENTE | CONFIRMADO — módulo `APROBADO` (2026-09-24). Detalle completo en `03_Modulos/MOD-001_Pacientes/trazabilidad.md`. `RF-PAC-012`/`RN-PAC-006` (unificación) y `RN-PAC-011` siguen `PROPUESTO` |
 | (análisis) | RF-HCL-000 | MOD-002 | — | — | — | — | PENDIENTE | PENDIENTE | IDENTIFICADO |
 | (análisis) | RF-CON-000 | MOD-003 | — | — | — | — | PENDIENTE | PENDIENTE | IDENTIFICADO |
 | (análisis) | RF-REC-000 | MOD-005 | — | — | — | — | PENDIENTE | PENDIENTE | IDENTIFICADO |

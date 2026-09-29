@@ -1048,7 +1048,8 @@ del propio paciente puede condicionar cómo se lo atiende y comunica.
 
 Preguntas surgidas al revisar el módulo completo para `LISTO_PARA_VALIDACION`. Salen de tres
 fuentes: huecos que nunca se habían preguntado (fusión de duplicados), contradicciones internas
-entre respuestas ya dadas, y la respuesta de los médicos sobre "procedencia". Ninguna es de
+entre respuestas ya dadas, y la respuesta de los médicos sobre "procedencia". Respondidas el 2026-09-26 por Leonel Alegre, responsable del proyecto: 15 confirman la
+hipótesis y `Q-PAC-064` la corrige (`CR-001`). Ninguna es de
 criticidad ALTA: cada una tiene una **hipótesis de trabajo** (origen `ANÁLISIS`, `Requiere
 validación: SÍ`) que ya se volcó al resto de los documentos marcada como tal. Se envían al
 cliente en
@@ -1073,8 +1074,8 @@ todo lo del otro registro (historia clínica, turnos, pagos, coberturas, adjunto
 pasa a la ficha que queda; el otro registro no se borra, queda en estado `Fusionado` apuntando a
 la ficha que queda, y toda la operación se audita.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así. Solo Dirección/administración unifica. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1093,8 +1094,8 @@ obras sociales distintas), ¿cómo se decide qué queda?
 descarta ninguno. Los datos administrativos (teléfono, domicilio, etc.) los elige campo por campo
 quien unifica. Las coberturas de ambas fichas se conservan (la principal la elige quien unifica).
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así. Antecedentes y alertas se suman siempre; el resto lo elige quien unifica. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1112,8 +1113,8 @@ antes de diseñarlo.
 **Hipótesis de trabajo:** no se deshace automáticamente. Un error se corrige a mano con ayuda de
 la auditoría, que conserva qué se movió de una ficha a otra.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Alcanza con corregirlo a mano. No se construye un "deshacer" automático. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1138,8 +1139,8 @@ mal cargado (queda en auditoría). `Q-PAC-016` (advertir y dejar continuar) se a
 coincidencias que no son de documento: mismo nombre y fecha de nacimiento, o mismo número de
 afiliado.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así. Con el mismo tipo y número de documento se impide el alta y se ofrece abrir la ficha existente; las demás coincidencias advierten y dejan continuar. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1157,8 +1158,8 @@ cargarlo, ¿es de 12 o de 24 horas?
 **Hipótesis de trabajo:** 24 horas, configurable por Dirección (`MOD-036`), para poder
 ajustarlo sin cambiar el sistema.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** 24 horas. Confirma la hipótesis (configurable por Dirección en `MOD-036`). (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1180,8 +1181,8 @@ los directivos".
 corrigen **sin límite de tiempo**, con auditoría. "Perfil directivo designado" es un permiso que
 Dirección asigna a las personas que decida (`MOD-027`), no una lista fija de nombres.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así. Los perfiles directivos designados corrigen sin límite de tiempo; el perfil es un permiso asignable. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1204,8 +1205,8 @@ revisar sigue siendo una alerta). Un médico los revisa y confirma. **Modificar 
 antecedente existente queda reservado al médico (dentro de la ventana, `Q-PAC-058`) y a los
 perfiles directivos (`Q-PAC-059`).
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así. Recepción agrega (pendiente de revisión médica); modificar o borrar queda para el médico o un perfil directivo. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1222,8 +1223,8 @@ perfiles directivos (`Q-PAC-059`).
 **Hipótesis de trabajo:** "dar de baja pacientes" es un permiso que Dirección le asigna a los
 médicos que decida. Por defecto solo lo tiene Dirección/administración.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, Dirección lo asigna. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1243,8 +1244,8 @@ se preguntó.
 el sistema avisa que el paciente tiene turnos futuros y los lista, para revisarlos a mano. Un
 paciente dado de baja no puede recibir turnos nuevos hasta que se lo reactive.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así. Se avisa y se listan los turnos futuros, sin cancelarlos; un paciente dado de baja no recibe turnos nuevos. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1262,8 +1263,8 @@ hacerlo?
 **Hipótesis de trabajo:** solo administración puede revertirlo, con un motivo obligatorio y
 auditoría.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí. Solo administración revierte un fallecimiento cargado por error, con motivo. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1283,8 +1284,8 @@ existe.
 **Hipótesis de trabajo:** es la localidad del domicilio, que ya es obligatoria. No se agrega
 ningún campo nuevo.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Ambas: la localidad donde vive **y** quién lo derivó (otro médico o institución). **Contradice la hipótesis** (solo localidad): se agrega el campo "derivado por" mediante [`CR-001`](../../00_Gobernanza/control_cambios.md#cr-001). (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA (con CR-001)
 
 ---
 
@@ -1301,8 +1302,8 @@ el parentesco con el titular?
 
 **Hipótesis de trabajo:** los dos datos existen como **opcionales**.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, como opcionales. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1320,8 +1321,8 @@ piso/departamento, código postal?
 **Hipótesis de trabajo:** calle y número obligatorios; piso/departamento y código postal
 opcionales; localidad y provincia elegidas de un listado.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí. Calle y número obligatorios; piso/departamento y código postal opcionales; localidad y provincia de un listado. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1339,8 +1340,8 @@ pacientes van por WhatsApp, llamado y SMS, **no email** (`Q-NOT-001`).
 **Hipótesis de trabajo:** canal preferido entre WhatsApp, llamada o SMS. El email se guarda solo
 como dato de contacto.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí. Canal preferido entre WhatsApp, llamada o SMS; el email se guarda solo como dato. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1363,8 +1364,8 @@ turno público), y además hay una tensión entre dos respuestas.
 el turno se vincula a esa ficha y recepción revisa las diferencias. Si no existe, el turno queda
 con datos provisorios y la ficha completa se da de alta en recepción cuando el paciente llega.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así. La solicitud web no crea ni modifica fichas. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1382,8 +1383,8 @@ todo el personal, como el resto de la ficha?
 **Hipótesis de trabajo:** sí, igual que el resto de la ficha (`Q-PAC-038`), con auditoría de
 cada descarga.
 
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, todo el personal. Confirma la hipótesis. (Ronda 3, 2026-09-26)
+**Estado:** VALIDADA
 
 ---
 
@@ -1399,7 +1400,8 @@ Q-PAC-001 a Q-PAC-053, con dos secciones de referencia cruzada sin numeración p
 propias preguntas (`Q-PAC-054` a `Q-PAC-056`). Las 16 preguntas nuevas de la sección 24
 (`Q-PAC-054` a `Q-PAC-069`) son MEDIA o BAJA y tienen hipótesis de trabajo documentada, como
 permite la Definition of Ready. El módulo pasó a **`LISTO_PARA_VALIDACION` y fue `APROBADO` el 2026-09-24**
-(ver [`README.md`](README.md)).
+(ver [`README.md`](README.md)). Las 16 de la sección 24 quedaron `VALIDADA` el 2026-09-26
+(Ronda 3); `Q-PAC-064` generó `CR-001`.
 
 Ver el detalle de decisiones que se toman a medida que estas preguntas se responden en
 [`decisiones.md`](decisiones.md), y la propagación obligatoria a todos los documentos listados

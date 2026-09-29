@@ -33,14 +33,14 @@ no preguntado o diferido).
 - Obligatorio (`Q-PAC-011`, `Q-PAC-043`).
 - Estructurado como mínimo con un subcampo de **localidad/zona** (no un único texto libre),
   porque debe poder filtrarse por zona (`Q-PAC-044`).
-- Resto del domicilio — hipótesis de trabajo hasta `Q-PAC-066`: calle y número obligatorios;
+- Resto del domicilio (`Q-PAC-066`, confirmado 2026-09-26): calle y número obligatorios;
   piso/departamento y código postal opcionales; localidad y provincia elegidas de un listado.
 
 ## Contacto
 
 - Teléfono — obligatorio.
 - WhatsApp — obligatorio, puede ser un número distinto al teléfono (`Q-PAC-026`).
-- Canal de contacto preferido — campo nuevo (`Q-PAC-047`). Hipótesis hasta `Q-PAC-067`:
+- Canal de contacto preferido — campo nuevo (`Q-PAC-047`). Confirmado en `Q-PAC-067`:
   WhatsApp, llamada o SMS, alineado con los canales de aviso de la Ronda 2 (`Q-NOT-001`, sin
   email).
 - Preferencia de opt-out de comunicaciones no esenciales (salvo aviso de turno) — campo nuevo
@@ -67,7 +67,7 @@ no preguntado o diferido).
 - Se conserva historial de coberturas anteriores al cambiar de obra social (`Q-PAC-020`).
 - Por afiliación: número de afiliado, plan/categoría, titular o familiar a cargo (`Q-PAC-019`).
 - Vencimiento de la credencial y parentesco con el titular — `Q-PAC-019` no los marcó.
-  Hipótesis hasta `Q-PAC-065`: ambos existen como campos **opcionales**.
+  Confirmado en `Q-PAC-065`: ambos existen como campos **opcionales**.
 - Flag de "atención particular puntual" pese a tener obra social vigente (`Q-PAC-021`).
 
 ## Estado administrativo
@@ -77,16 +77,24 @@ no preguntado o diferido).
 - Fecha de alta, fecha de última modificación.
 - Motivo de baja (si aplica).
 - Fecha de fallecimiento (si aplica) y, si se revirtió por error, motivo de la reversión
-  (hipótesis `Q-PAC-063`).
-- Ficha que queda (solo si el estado es `Fusionado`, hipótesis `Q-PAC-054`).
+  (`Q-PAC-063`).
+- Ficha que queda (solo si el estado es `Fusionado`, `Q-PAC-054`).
 
 ## Encabezado de la ficha (lo que se ve al abrirla)
 
 Pedido por los médicos (`Q-HCL-003`, `DEC-HCL-001`): nombre y apellido, **edad** (calculada a
 partir de la fecha de nacimiento, no se carga aparte), obra social principal y **procedencia**.
-Hipótesis hasta `Q-PAC-064`: "procedencia" es la localidad del domicilio, sin campo nuevo. Si el
-cliente responde que se refiere a quién lo derivó, se agrega un campo "derivado por". Debajo del
-encabezado van las alertas clínicas (sección siguiente).
+"Procedencia" son **dos datos** (`Q-PAC-064`, Ronda 3, 2026-09-26): la localidad del domicilio,
+que ya existe, y **quién lo derivó**, que se agregó con [`CR-001`](../../00_Gobernanza/control_cambios.md#cr-001)
+(ver sección siguiente). Debajo del encabezado van las alertas clínicas.
+
+## Derivación (`CR-001`)
+
+- Derivado por — **opcional**: nombre del médico o de la institución que derivó al paciente, en
+  texto libre (`RF-PAC-022`). Vacío significa que llegó por su cuenta o que no se sabe.
+- Se carga en el alta o al editar la ficha, y se muestra en el encabezado junto con la localidad.
+- No se arma un catálogo de derivantes: la respuesta no lo pidió. Si más adelante hace falta
+  informar derivaciones por médico o institución, se agrega por Change Request.
 
 ## Información clínica básica (límite con MOD-002)
 
@@ -99,7 +107,7 @@ encabezado van las alertas clínicas (sección siguiente).
   de la ficha. Eduardo Peña respondió "Ninguna" a `Q-HCL-006`; no cambia la regla, que fijó el
   cliente (`Q-HCL-010` pide confirmarlo).
 - Por cada antecedente: categoría, descripción, si es alerta crítica, quién lo cargó y cuándo, y
-  estado de revisión (`pendiente de revisión médica` / `confirmado`, hipótesis `Q-PAC-060`).
+  estado de revisión (`pendiente de revisión médica` / `confirmado`, `Q-PAC-060`).
 
 ## Documentación adjunta
 
@@ -111,7 +119,7 @@ encabezado van las alertas clínicas (sección siguiente).
 
 - Consentimiento de tratamiento de datos personales y clínicos — obligatorio en el alta
   presencial; no confirmado (no marcado) para el formulario de turnos online (`Q-PAC-045`).
-  Es consistente con la hipótesis `RN-PAC-011`: la solicitud web no crea la ficha, así que el
+  Es consistente con `RN-PAC-011` (confirmada en `Q-PAC-068`): la solicitud web no crea la ficha, así que el
   consentimiento se registra en recepción, al completar el alta.
 - Consentimiento de uso de fotografía — separado del anterior (`Q-PAC-046`).
 
@@ -123,7 +131,7 @@ encabezado van las alertas clínicas (sección siguiente).
   incluyendo el historial de correcciones de DNI, consultable sin restricción de rol
   (`Q-PAC-017`).
 - Ventana de corrección de antecedentes clínicos para el médico (`Q-PAC-037`, `RF-PAC-018`).
-  Hipótesis: 24 h desde la carga, configurable (`Q-PAC-058`); los perfiles directivos designados
+  24 h desde la carga, configurable (`Q-PAC-058`); los perfiles directivos designados
   corrigen sin límite (`Q-PAC-059`).
 - Registro de exportaciones/impresiones de la ficha: quién y cuándo (`Q-PAC-034`).
 
@@ -137,8 +145,8 @@ encabezado van las alertas clínicas (sección siguiente).
 | Categoría | Visibilidad | Edición |
 |---|---|---|
 | Identificación, datos personales, contacto, cobertura | Todo el personal autenticado (`Q-PAC-036`, `Q-PAC-038`) | Todo el personal con acceso a la ficha |
-| Antecedentes, alergias, alertas clínicas | Todo el personal autenticado (`Q-PAC-038`: no hay separación de visibilidad) | Agregar: todos (si no es médico, queda pendiente de revisión). Modificar/eliminar: médico dentro de la ventana, o perfil directivo designado (`Q-PAC-032`, `Q-PAC-037`, hipótesis `Q-PAC-058` a `Q-PAC-060`) |
-| Documentación adjunta | Todo el personal autenticado, con auditoría de cada descarga (hipótesis `Q-PAC-069`) | Todo el personal con acceso a la ficha |
+| Antecedentes, alergias, alertas clínicas | Todo el personal autenticado (`Q-PAC-038`: no hay separación de visibilidad) | Agregar: todos (si no es médico, queda pendiente de revisión). Modificar/eliminar: médico dentro de la ventana, o perfil directivo designado (`Q-PAC-032`, `Q-PAC-037`, `Q-PAC-058` a `Q-PAC-060`) |
+| Documentación adjunta | Todo el personal autenticado, con auditoría de cada descarga (`Q-PAC-069`) | Todo el personal con acceso a la ficha |
 
 Detalle de permisos por rol y acción: ver [`reglas_negocio.md`](reglas_negocio.md#permisos-por-rol-y-acción).
 

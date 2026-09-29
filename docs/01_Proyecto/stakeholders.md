@@ -9,7 +9,9 @@ confirmar — cualquier alcance de rol abajo es hipótesis hasta validarse.
 | Nombre | Rol mencionado | Fuente | Estado |
 |---|---|---|---|
 | Hernán | Administrador (acceso a caja); contacto para datos de médicos (`RC-010`) | `RC-009`, `RC-010` | A confirmar rol exacto |
-| Eduardo | Administrador (acceso a caja) | `RC-009` | A confirmar rol exacto |
+| Eduardo Peña | Administrador (acceso a caja) y médico oftalmólogo | `RC-009`, `Q-MED-005` | Confirmado (2026-09-26) |
+| Cecilia Portillo Rivero | Médica oftalmóloga | Cuestionario de médicos, `Q-MED-005` | Confirmado (2026-09-26) |
+| Leonel Alegre | Responsable del proyecto y desarrollador del sistema; aprueba los módulos | `Q-PRY-001` | Confirmado (2026-09-26) |
 | Melisa | Administrador (acceso a caja) | `RC-009` | A confirmar rol exacto |
 | Noelia | Administrador (acceso a caja) | `RC-009` | A confirmar rol exacto |
 
@@ -22,7 +24,7 @@ específicas. Ver [`RC-009`](../02_Requerimientos/requerimientos_cliente_raw.md)
 
 | Grupo | Interés / rol esperado | Confirmado |
 |---|---|---|
-| Dirección / administración de la clínica | Define alcance, aprueba módulos, es la voz "CLIENTE" en esta documentación | Parcial — se desconoce si hay más de una persona con autoridad de aprobación además de quien da los requerimientos |
+| Dirección / administración de la clínica | Define alcance, aprueba módulos, es la voz "CLIENTE" en esta documentación | Parcial — la aprobación de módulos la hace el responsable del proyecto, Leonel Alegre (`Q-PRY-001`, 2026-09-26; ver `RIE-010`) |
 | Médicos / profesionales | Usuarios de agenda, historia clínica, cirugías, recetas, fórmulas; sus necesidades específicas **todavía no fueron relevadas** (`RC-006`) | No |
 | Secretarios/as | Usuarios de agenda, turnos, recepción, caja, solicitudes públicas | No |
 | Administración / caja | Usuarios de caja, pagos, reportes administrativos (probablemente Hernán/Eduardo/Melisa/Noelia) | Parcial |

@@ -14,14 +14,16 @@ Origen de esta primera tanda: entrevista a médicos `INV-004`, ver
 | DEC-CON-002 | La estructura de la consulta cambia según la especialidad (no hay un formato común único) | MÉDICOS (`Q-CON-003`) | 2026-09-15 | `alcance.md`, modelo de dominio |
 | DEC-CON-003 | Para Oftalmología específicamente, la consulta registra: agudeza visual con y sin corrección; presión intraocular (indicando con qué aparato se mide); y, opcional, medición de ARM (autorrefractómetro) | MÉDICOS (`Q-CON-004`) | 2026-09-15 | `datos.md` (a crear), diseño de plantilla de consulta oftalmológica |
 | DEC-CON-004 | Cada consulta también debe poder registrar el **próximo control sugerido**. Complementa `DEC-CON-001` (Portillo Rivero no lo había marcado; Peña sí) | MÉDICOS (`Q-CON-002`, Eduardo Peña) | 2026-09-24 | `alcance.md`, `requerimientos.md` (a crear) |
+| DEC-CON-005 | La consulta tiene un **formato común** para todas las especialidades. Las mediciones de oftalmología (agudeza visual con y sin corrección, presión intraocular con el aparato usado, ARM) están en ese formato como campos **opcionales**. Reemplaza `DEC-CON-002` y hace opcionales los campos de `DEC-CON-003` | CLIENTE (`Q-CON-005`, Ronda 3) | 2026-09-26 | `alcance.md`, `datos.md` (a crear), modelo de dominio |
 
 ## Divergencia entre profesionales (2026-09-24)
 
 `DEC-CON-001` a `DEC-CON-003` salieron de las respuestas de Cecilia Portillo Rivero. Eduardo Peña
 respondió que la consulta tiene un **formato común para todas las especialidades** (`Q-CON-003`)
-y que **no** necesita registrar mediciones específicas (`Q-CON-004`). `DEC-CON-002`/`DEC-CON-003`
-se mantienen hasta que el cliente resuelva en `Q-CON-005` (Ronda 3). La diferencia podría
-explicarse porque atienden especialidades distintas (`Q-MED-005`).
+y que **no** necesita registrar mediciones específicas (`Q-CON-004`). **Resuelta en la Ronda 3 (2026-09-26)**
+con `Q-CON-005`: formato común, con las mediciones de oftalmología como opcionales
+(`DEC-CON-005`). La diferencia no venía de la especialidad: los dos son oftalmólogos
+(`Q-MED-005`).
 
 ## Nota
 

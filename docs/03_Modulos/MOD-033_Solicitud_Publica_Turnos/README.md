@@ -22,3 +22,10 @@ respuestas todavía pendientes de `MOD-001`). Ver
 [`../../08_Pendientes/cuestionario_cliente_ronda_2.md#mod-033`](../../08_Pendientes/cuestionario_cliente_ronda_2.md#mod-033).
 Preguntas adicionales (más profundas) se agregarán cuando a este módulo le toque su
 refinamiento completo, uno por vez, según [`../README.md`](../README.md).
+
+## Respuesta de la Ronda 3 (2026-09-26)
+
+`Q-PAC-068` confirmó `RN-PAC-011` de `MOD-001`: la solicitud web o por WhatsApp **no crea ni
+modifica fichas**. Si el DNI existe, el turno se vincula a esa ficha y recepción revisa las
+diferencias; si no existe, el turno queda con datos provisorios y la ficha completa se hace en
+recepción.

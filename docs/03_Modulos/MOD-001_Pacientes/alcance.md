@@ -2,8 +2,8 @@
 
 **Estado del documento:** confirmado tras la Ronda 1 respondida por el cliente el 2026-09-08 y
 las respuestas de los médicos (`INV-004`, 2026-09-24). Ver [`preguntas.md`](preguntas.md) y
-[`decisiones.md`](decisiones.md). Los detalles que dependen de la Ronda 3 están marcados como
-hipótesis en cada documento.
+[`decisiones.md`](decisiones.md). Las hipótesis de trabajo quedaron confirmadas en
+la Ronda 3 (2026-09-26); "procedencia" se amplió con `CR-001`.
 
 ## Alcance confirmado
 
@@ -28,7 +28,8 @@ hipótesis en cada documento.
 - Antecedentes y alertas clínicas visibles siempre en la ficha (alergias a medicamentos,
   antecedentes quirúrgicos relevantes, enfermedades crónicas), con alerta destacada + ventana
   emergente. Confirmado también por los médicos (`INV-004`, `DEC-PAC-020`).
-- Encabezado de la ficha con nombre, edad, obra social principal y procedencia (`Q-HCL-003`).
+- Encabezado de la ficha con nombre, edad, obra social principal y procedencia: localidad y
+  quién lo derivó (`Q-HCL-003`, `Q-PAC-064`, `CR-001`).
 - Permisos por rol y acción según la matriz de [`reglas_negocio.md`](reglas_negocio.md).
 - Fotografía (no prioritaria) y documentación adjunta (DNI escaneado, carnet de obra social,
   consentimientos firmados), cada una con su consentimiento correspondiente.
@@ -36,7 +37,7 @@ hipótesis en cada documento.
   cliente, ver nota de riesgo en `decisiones.md`); la edición de antecedentes clínicos sí
   está restringida: recepción puede agregarlos (quedan pendientes de revisión médica), y
   modificarlos solo puede hacerlo el médico dentro de una ventana de corrección o un perfil
-  directivo designado (hipótesis `Q-PAC-058` a `Q-PAC-060`).
+  directivo designado (`Q-PAC-058` a `Q-PAC-060`).
 - Auditoría de todos los cambios sobre la ficha, sin excepciones.
 - Exportación/impresión de la ficha, auditada.
 - Migración de pacientes desde el sistema anterior de la clínica (confirmado que hay datos a
@@ -53,14 +54,14 @@ hipótesis en cada documento.
 - Un portal de autogestión del paciente **no está en los planes** del cliente (`Q-PAC-049`,
   confirmado 2026-09-08) — se mantiene fuera de alcance, ver
   [`../../01_Proyecto/fuera_de_alcance.md`](../../01_Proyecto/fuera_de_alcance.md).
-- La solicitud pública de turnos no crea ni modifica fichas (hipótesis `RN-PAC-011`,
+- La solicitud pública de turnos no crea ni modifica fichas (`RN-PAC-011`,
   `Q-PAC-068`); el alta completa se hace en recepción.
 
 ## En alcance, fuera del primer incremento de construcción
 
-- Unificación de fichas duplicadas (`RF-PAC-012`, `RN-PAC-006`): hipótesis completa
-  documentada, pero no se construye hasta que el cliente confirme `Q-PAC-054` a `Q-PAC-056`
-  (`DEC-PAC-022`).
+- Unificación de fichas duplicadas (`RF-PAC-012`, `RN-PAC-006`): confirmada el 2026-09-26
+  (`Q-PAC-054` a `Q-PAC-056`), se construye en un incremento posterior al primero
+  (`DEC-PAC-025`).
 
 ## Decisión de diseño (confirmada)
 

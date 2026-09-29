@@ -11,8 +11,8 @@ la nota al final de este documento.
 
 | Profesional | Especialidad | Respuestas |
 |---|---|---|
-| Dra. Cecilia Portillo Rivero | `PENDIENTE_DEFINICION` (no declarada en el formulario) | Las volcadas en cada pregunta más abajo, recibidas el 2026-09-15 |
-| Dr. Eduardo Peña | `PENDIENTE_DEFINICION` (no declarada en el formulario) | Recibidas por separado; transcriptas en la sección [Respuestas de Eduardo Peña](#respuestas-de-eduardo-peña) al final de este documento, con las divergencias frente a Portillo Rivero |
+| Dra. Cecilia Portillo Rivero | Oftalmología (`Q-MED-005`, 2026-09-26) | Las volcadas en cada pregunta más abajo, recibidas el 2026-09-15 |
+| Dr. Eduardo Peña | Oftalmología; además administrador con acceso a caja (`Q-MED-005`, 2026-09-26) | Recibidas por separado; transcriptas en la sección [Respuestas de Eduardo Peña](#respuestas-de-eduardo-peña) al final de este documento, con las divergencias frente a Portillo Rivero |
 
 Hipótesis a confirmar (`Q-MED-005`, Ronda 3): Eduardo Peña es el mismo "Eduardo" que figura
 como administrador con acceso a caja (`RC-009`), y en la Ronda 2 el cliente menciona "los turnos
@@ -398,6 +398,11 @@ Clasificación:
 | Q-EST-003 | OCT, CVC (campo visual computarizado), retinografía, **ecografía ocular** | OCT, retinografía, campo visual, IOL | Complementa (agrega ecografía ocular) |
 | Q-EST-004 | Sí, necesitamos poder comentarlo/interpretarlo | Igual | Coincide |
 | Q-EVO-002 | Cambios de indicación entre consultas, resultados de un estudio que llega después | Llamados (ampliado a las tres el 2026-09-15) | Coincide con la versión ampliada |
+
+**Resolución (2026-09-26):** las divergencias se resolvieron en la Ronda 3 del cliente. Los dos
+profesionales son oftalmólogos (`Q-MED-005`), así que no se explican por especialidad. Ver
+[`cuestionario_cliente_ronda_3.md`](cuestionario_cliente_ronda_3.md) (bloque 3) y
+`decisiones.md` de `MOD-002` a `MOD-006`.
 | Q-EVO-003 | Alcanza con la lista en orden | Igual | Coincide |
 | Q-AGE-005 | Motivo de la consulta, **si es primera vez o control**, obra social | Motivo, obra social | Complementa (agrega primera vez / control) |
 | Q-AGE-006 | Solo la propia | Igual | Coincide |

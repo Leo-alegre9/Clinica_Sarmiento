@@ -42,7 +42,10 @@ Definir si el sistema de producción será:
   clínica sigue atendiendo en papel en ese caso, o se detiene la operación)?
 - ¿Existe presupuesto para hosting recurrente, o se prefiere una inversión única en hardware
   local?
-- ¿Quién sería responsable técnico del mantenimiento en cada escenario?
+- ¿Quién sería responsable técnico del mantenimiento en cada escenario? **Respondido 2026-09-26
+  (`Q-DEP-003`):** hoy nadie en particular se ocupa de las computadoras ni de la conexión de la
+  clínica. Esto pesa contra la instalación local (que exige mantenimiento en el lugar) y a favor
+  de una solución gestionada en la nube, en línea con `Q-BCK-002` (`INV-006`).
 - Ver también `INV-005` en
   [`../../08_Pendientes/investigaciones.md`](../../08_Pendientes/investigaciones.md).
 

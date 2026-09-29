@@ -43,7 +43,7 @@ refinamiento posterior revele complejidad adicional.
 **Excepciones:**
 
 - 6a. El tipo y número de documento coinciden exactamente con otro paciente → el sistema
-  **impide** el alta y ofrece abrir la ficha existente (`RN-PAC-001`; hipótesis `Q-PAC-057`,
+  **impide** el alta y ofrece abrir la ficha existente (`RN-PAC-001`; `Q-PAC-057`,
   que resuelve la contradicción con `Q-PAC-016`).
 - 6b. Coinciden nombre y fecha de nacimiento, o el número de afiliado de obra social → el
   sistema **advierte y permite continuar** si recepción confirma que son personas distintas
@@ -94,10 +94,10 @@ refinamiento posterior revele complejidad adicional.
 ## CU-PAC-003 — Fusión de pacientes duplicados
 
 - **Objetivo:** unificar dos registros de paciente que representan a la misma persona.
-**Estado:** `PROPUESTO` — hipótesis completa, pendiente de `Q-PAC-054` a `Q-PAC-056`. Fuera
-del primer incremento de construcción (`DEC-PAC-022`).
+**Estado:** `CONFIRMADO` (2026-09-26, `Q-PAC-054` a `Q-PAC-056`). Se construye en un incremento
+posterior al primero (`DEC-PAC-025`).
 
-- **Actor principal:** Dirección/administración (hipótesis `Q-PAC-054`).
+- **Actor principal:** Dirección/administración (`Q-PAC-054`).
 - **Disparador:** se detecta que dos fichas corresponden al mismo paciente. El caso típico es
   un paciente cargado con código provisorio que después aparece con DNI en otra ficha.
 - **Precondiciones:** existen al menos dos registros de paciente candidatos a fusión.
@@ -105,7 +105,7 @@ del primer incremento de construcción (`DEC-PAC-022`).
   facturación de ambos; el registro perdedor queda marcado como `Fusionado`, referenciando al
   ganador.
 
-**Flujo principal (hipótesis):**
+**Flujo principal:**
 
 1. El usuario identifica las dos fichas.
 2. El sistema muestra ambas lado a lado.
@@ -161,17 +161,17 @@ cuidadosa antes de construirse.
 **Flujos alternativos:**
 
 - 1a. Lo carga recepción o administración (`Q-PAC-032`) → el sistema lo guarda como
-  `pendiente de revisión médica` y lo muestra igual (hipótesis `Q-PAC-060`). Cuando un médico
+  `pendiente de revisión médica` y lo muestra igual (`Q-PAC-060`). Cuando un médico
   abre la ficha, ve la marca y puede confirmarlo.
 - 1b. El médico necesita corregir un antecedente propio dentro de la ventana de corrección → lo
   edita libremente, con auditoría (`HU-PAC-010`).
 - 1c. Hay que corregirlo fuera de la ventana → solo puede hacerlo un perfil directivo designado
-  (hipótesis `Q-PAC-059`).
+  (`Q-PAC-059`).
 
 **Excepciones:**
 
 - 1d. Un usuario no médico intenta modificar o eliminar un antecedente existente → el sistema lo
-  rechaza (hipótesis `Q-PAC-060`).
+  rechaza (`Q-PAC-060`).
 - Un antecedente nunca se borra físicamente: "eliminar" lo marca como anulado, con motivo, y
   queda en auditoría (`RNF-INC-001`).
 
@@ -194,7 +194,7 @@ cuidadosa antes de construirse.
 1. El usuario abre la ficha y elige "dar de baja".
 2. El sistema pide el motivo.
 3. Si el paciente tiene turnos futuros, el sistema los lista y avisa que no se cancelan solos
-   (hipótesis `Q-PAC-062`).
+   (`Q-PAC-062`).
 4. El usuario confirma.
 5. El sistema marca al paciente como `Inactivo`. Sigue apareciendo en las búsquedas, identificado
    como inactivo.
@@ -208,7 +208,7 @@ cuidadosa antes de construirse.
 
 - 1a. El usuario no tiene permiso de baja → el sistema rechaza la acción.
 - Mientras está inactivo, un intento de asignarle un turno nuevo se rechaza, indicando que debe
-  reactivarse primero (hipótesis `Q-PAC-062`).
+  reactivarse primero (`Q-PAC-062`).
 
 **Reglas de negocio:** RN-PAC-005, RN-PAC-008.
 **Requisitos relacionados:** RF-PAC-005.

@@ -12,6 +12,8 @@ Origen de esta primera tanda: entrevista a médicos `INV-004`, ver
 |---|---|---|---|---|
 | DEC-FOR-001 | Los médicos usan fórmulas oftalmológicas todos los días (uso diario, no ocasional); esto eleva la prioridad de destrabar el módulo | MÉDICOS (`Q-FOR-004`) | 2026-09-15 | `README.md` |
 | DEC-FOR-002 | La clínica sí usa Treelan para calcular la adición de lentes de cerca. Resuelve a favor de los médicos (`Q-FOR-005`) la contradicción con `Q-FOR-002` de la Ronda 2 del cliente ("ninguno, se hace en papel"), que queda marcada como desactualizada en `cuestionario_cliente_ronda_2.md` | EQUIPO — confirmación directa del responsable del proyecto, sin nueva ronda formal al cliente | 2026-09-15 | `README.md`, `INV-002` en `investigaciones.md` |
+| DEC-FOR-003 | Todos los médicos usan **las dos** herramientas, Treelan y Ampina. `Q-FOR-002` de la Ronda 2 ("ninguno") queda desactualizada también respecto de Ampina | CLIENTE (`Q-FOR-007`, Ronda 3) | 2026-09-26 | `README.md`, `INV-002`, `INV-003` |
+| DEC-FOR-004 | La queja sobre esas herramientas es la **lentitud**: las respuestas del proveedor tienen retardo. El sistema nuevo tiene que responder rápido en los cálculos y consultas de uso diario (`RNF-PER-002`) | CLIENTE (`Q-FOR-008`, aclara `Q-FOR-006` de Peña) | 2026-09-26 | `../../02_Requerimientos/requerimientos_no_funcionales.md` |
 
 ## Investigación todavía pendiente
 
@@ -31,6 +33,12 @@ un profesional). Ver
 mantiene. Se pregunta al cliente en `Q-FOR-007` (Ronda 3) y se amplía el pedido de acceso de
 `Q-FOR-003` a ambas herramientas. La respuesta de Peña a `Q-FOR-006` ("La base de datos. Lente
 respuesta del proveedor") no se interpreta sin aclarar (`Q-FOR-008`).
+
+**Actualización 2026-09-26 (Ronda 3):** todos usan las dos herramientas (`DEC-FOR-003`) y la queja es
+la lentitud (`DEC-FOR-004`). De Ampina no hay acceso a las fórmulas, pero el cliente va a
+enviar un PDF. De Treelan no hay material todavía.
+
+Las preguntas para destrabar el cálculo (cómo se pasa de lejos a cerca, qué hace cada herramienta, si el sistema propone o solo muestra) están en [`../../08_Pendientes/cuestionario_medicos_ronda_2.md`](../../08_Pendientes/cuestionario_medicos_ronda_2.md), bloque 1.
 
 El módulo sigue `IDENTIFICADO — BLOQUEADO por investigación documental` hasta conseguir esa
 documentación de Treelan; no pasa a `EN_DESCUBRIMIENTO` todavía.

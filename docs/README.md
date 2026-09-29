@@ -6,7 +6,7 @@ aprobado aquí. Ver la filosofía completa en
 [`01_Proyecto/vision.md`](01_Proyecto/vision.md) y las reglas de proceso en
 [`00_Gobernanza/README.md`](00_Gobernanza/README.md).
 
-**Última actualización:** 2026-09-24 — `MOD-001` aprobado y Ronda 3 armada.
+**Última actualización:** 2026-09-26 — Ronda 3 respondida y volcada; `CR-001` sobre `MOD-001`.
 
 ## Cómo navegar esta documentación
 
@@ -32,12 +32,15 @@ aprobado aquí. Ver la filosofía completa en
 - **Fase de requisitos:** **`MOD-001 — Pacientes`** está **`APROBADO`** desde el
   2026-09-24 (ver [`03_Modulos/MOD-001_Pacientes/README.md`](03_Modulos/MOD-001_Pacientes/README.md)).
   Respondieron la Ronda 1 y la Ronda 2 del cliente y la Ronda 1 de médicos (Cecilia Portillo
-  Rivero y Eduardo Peña). La **Ronda 3** para el cliente está armada y pendiente de envío:
+  Rivero y Eduardo Peña). La **Ronda 3** fue respondida el 2026-09-26 y volcada a los documentos:
   [`08_Pendientes/cuestionario_cliente_ronda_3.md`](08_Pendientes/cuestionario_cliente_ronda_3.md).
+  Confirmó las hipótesis de `MOD-001`, salvo "procedencia" (`CR-001`). La **Ronda 2 de médicos**
+  (fórmulas y plantilla oftalmológica) está armada y pendiente de envío:
+  [`08_Pendientes/cuestionario_medicos_ronda_2.md`](08_Pendientes/cuestionario_medicos_ronda_2.md).
 - **Módulos aprobados:** `MOD-001` (2026-09-24). Ver
   [`09_Aprobaciones/modulos_aprobados.md`](09_Aprobaciones/modulos_aprobados.md).
-- **Investigaciones abiertas:** `INV-002`, `INV-003` (reabierta), `INV-005`, `INV-006` e
-  `INV-007`. Ver [`08_Pendientes/investigaciones.md`](08_Pendientes/investigaciones.md).
+- **Investigaciones abiertas:** `INV-002`, `INV-003`, `INV-005` e `INV-006` (`INV-007` resuelta
+  el 2026-09-26). Ver [`08_Pendientes/investigaciones.md`](08_Pendientes/investigaciones.md).
 
 ## Regla de oro
 

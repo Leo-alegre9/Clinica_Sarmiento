@@ -1,6 +1,7 @@
 # Cuestionario para el cliente — Ronda 3
 
-**Estado: ARMADO el 2026-09-24, pendiente de envío.** Versión interactiva: https://claude.ai/artifact/Brjz6CJvDBumjYfFqVNVx6
+**Estado: RESPONDIDO el 2026-09-26** por Leonel Alegre, responsable del proyecto (se registró su rol en el
+formulario como "Desarrollador"). Armado el 2026-09-24. Versión interactiva: https://claude.ai/artifact/Brjz6CJvDBumjYfFqVNVx6
 (las respuestas se guardan en su base de datos, documento `respuestas/ronda-3-cliente`). 29 preguntas en 4 bloques, más una lista
 de documentos a pedir (bloque 5).
 
@@ -33,8 +34,8 @@ lista de opciones termina en "Otro", que habilita un texto libre.
 
 ## Antes de empezar
 
-- Nombre de quien responde: ____________
-- Rol en la clínica: ____________
+- Nombre de quien responde: Leonel Alegre
+- Rol: responsable del proyecto (desarrollador del sistema)
 - Para el bloque 3 conviene responder junto con los dos médicos que completaron el cuestionario
   anterior, o con quien la clínica designe para decidir temas clínicos.
 
@@ -51,21 +52,21 @@ obras sociales, documentos) pasa a la que queda, y la otra no se borra: queda ma
 "unificada". ¿Está bien así?
 Opciones: Sí, así / Sí, pero también debería poder hacerlo recepción / Sí, pero también debería
 poder hacerlo un médico / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así.
+**Estado:** VALIDADA
 
 **Q-PAC-055** (Media) — Si las dos fichas tienen datos distintos, proponemos que **las alergias
 y antecedentes se sumen siempre** (nunca se descarta ninguno) y que el resto de los datos
 (teléfono, domicilio, etc.) los elija quien unifica. ¿Está bien así?
 Opciones: Sí, así / No, un médico debería revisar las alergias antes de unificar / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así.
+**Estado:** VALIDADA
 
 **Q-PAC-056** (Baja) — Si se unifican dos fichas por error, ¿hace falta un botón para deshacerlo,
 o alcanza con corregirlo a mano (el sistema guarda qué se movió)?
 Opciones: Alcanza con corregirlo a mano / Hace falta poder deshacerlo / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Alcanza con corregirlo a mano.
+**Estado:** VALIDADA
 
 **Q-PAC-057** (Media) — En la Ronda 1 nos dijeron que **no puede haber dos pacientes con el
 mismo DNI**, y también que ante un posible duplicado el sistema **avise pero deje continuar**.
@@ -73,8 +74,8 @@ Para que las dos cosas se cumplan, proponemos: si el DNI es **exactamente el mis
 no deja crear otra ficha y ofrece abrir la que ya existe; si solo coinciden nombre y fecha de
 nacimiento (o el número de afiliado), avisa y deja continuar. ¿Está bien así?
 Opciones: Sí, así / No, con el mismo DNI también debe dejar continuar / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así.
+**Estado:** VALIDADA
 
 ### Corrección de antecedentes clínicos
 
@@ -82,8 +83,8 @@ Opciones: Sí, así / No, con el mismo DNI también debe dejar continuar / Otro.
 antecedente (por ejemplo, una alergia) después de cargarlo. Proponemos **24 horas**, con la
 posibilidad de que Dirección lo cambie más adelante sin tocar el sistema. ¿Está bien así?
 Opciones: 24 horas / 12 horas / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** 24 horas.
+**Estado:** VALIDADA
 
 **Q-PAC-059** (Media) — También nos pidieron que un perfil directivo ("el mío y el de Nadia")
 pueda corregir cualquier cosa, y en otra respuesta, que sea **sin límite de tiempo**. Proponemos:
@@ -91,8 +92,8 @@ el médico corrige dentro del plazo de la pregunta anterior; los perfiles direct
 cualquier momento**; y quiénes tienen ese perfil lo decide Dirección desde el sistema (no queda
 fijo a dos personas). ¿Está bien así?
 Opciones: Sí, así / Los directivos también deberían tener el mismo plazo que el médico / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así.
+**Estado:** VALIDADA
 
 **Q-PAC-060** (Media) — Recepción puede cargar alergias y antecedentes "con supervisión
 posterior". Proponemos: recepción puede **agregar** antecedentes; se ven enseguida en la ficha,
@@ -101,8 +102,8 @@ uno ya cargado solo pueden hacerlo el médico (dentro del plazo) o un perfil dir
 bien así?
 Opciones: Sí, así / Recepción también debería poder modificar o borrar / Lo que carga recepción
 no necesita revisión médica / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así.
+**Estado:** VALIDADA
 
 ### Baja y fallecimiento
 
@@ -110,8 +111,8 @@ no necesita revisión médica / Otro.
 paciente. Proponemos que Dirección le asigne ese permiso a los médicos que decida. ¿Está bien
 así, o ya saben qué médicos y en qué casos?
 Opciones: Sí, Dirección lo asigna / Ya sabemos cuáles (indicar en "Otro") / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, Dirección lo asigna.
+**Estado:** VALIDADA
 
 **Q-PAC-062** (Media) — Si se da de baja a un paciente que tiene turnos futuros, proponemos lo
 mismo que para el fallecimiento: el sistema **avisa y muestra esos turnos**, pero no los cancela
@@ -119,48 +120,48 @@ solo. Además, mientras esté dado de baja **no se le pueden dar turnos nuevos**
 reactive. ¿Está bien así?
 Opciones: Sí, así / Sí, pero que igual se le puedan dar turnos nuevos / Los turnos futuros se
 deberían cancelar solos / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así.
+**Estado:** VALIDADA
 
 **Q-PAC-063** (Baja) — Si se marca a un paciente como fallecido por error, proponemos que solo
 administración pueda revertirlo, indicando el motivo. ¿Está bien así?
 Opciones: Sí / No debería poder revertirse / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí.
+**Estado:** VALIDADA
 
 ### Datos de la ficha
 
 **Q-PAC-064** (Media) — Los médicos pidieron ver la **"procedencia"** del paciente al abrir la
 ficha. ¿A qué se refiere?
 Opciones: La localidad donde vive / Quién lo derivó (otro médico o institución) / Ambas / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Ambas.
+**Estado:** VALIDADA — contradice la hipótesis (solo localidad): genera `CR-001`, campo "derivado por"
 
 **Q-PAC-065** (Baja) — De la obra social del paciente, ¿quieren poder anotar también la fecha de
 vencimiento de la credencial y el parentesco con el titular? Proponemos dejarlos como datos
 opcionales.
 Opciones: Sí, como opcionales / Sí, como obligatorios / No hacen falta / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, como opcionales.
+**Estado:** VALIDADA
 
 **Q-PAC-066** (Baja) — Del domicilio, proponemos: calle y número obligatorios; piso/departamento
 y código postal opcionales; localidad y provincia elegidas de una lista. ¿Está bien así?
 Opciones: Sí / Alcanza con localidad y una dirección escrita libre / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí.
+**Estado:** VALIDADA
 
 **Q-PAC-067** (Baja) — Como "medio de contacto preferido" del paciente, proponemos ofrecer
 WhatsApp, llamada o SMS, que son los medios que eligieron para los avisos. El email se guarda
 solo como dato. ¿Está bien así?
 Opciones: Sí / El email también debe poder elegirse como preferido / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí.
+**Estado:** VALIDADA
 
 **Q-PAC-069** (Baja) — Los documentos adjuntos a la ficha (DNI escaneado, carnet,
 consentimientos), ¿los puede ver todo el personal, como el resto de la ficha?
 Opciones: Sí, todo el personal / Solo algunos (indicar quiénes en "Otro") / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, todo el personal.
+**Estado:** VALIDADA
 
 ---
 
@@ -175,16 +176,16 @@ paciente llega. ¿Está bien así?
 Opciones: Sí, así / Si el DNI no existe, el pedido web debería crear la ficha igual / Si el
 paciente escribe otro teléfono, debería actualizarse solo / Otro.
 Alimenta: `MOD-001`, `MOD-010`, `MOD-011`, `MOD-033`.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, así.
+**Estado:** VALIDADA — confirma `RN-PAC-011`
 
 **Q-OSO-004** (Media) — Si un paciente tiene más de una obra social, ¿con cuál se registra cada
 atención?
 Opciones: Siempre con la principal / Recepción elige en cada atención (la principal viene
 marcada) / Depende de la práctica / Otro.
 Alimenta: `MOD-019`, `MOD-020`, `MOD-023`.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Recepción elige en cada atención (la principal viene marcada).
+**Estado:** VALIDADA — volcada a `MOD-019`/`MOD-023`
 
 **Q-OSO-005** (Alta para `MOD-019`, no para `MOD-001`) — Con las obras sociales, ¿el sistema
 tiene que ayudarlos a **armar la presentación o liquidación** que se manda a cada obra social
@@ -193,8 +194,8 @@ paciente y qué se le hizo?
 Opciones: Tiene que armar la presentación/liquidación / Alcanza con registrar / Todavía no lo
 sabemos / Otro.
 Alimenta: `MOD-019`, `MOD-020`, `MOD-021`; resuelve `DECP-005` e `INV-007`.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Alcanza con registrar.
+**Estado:** VALIDADA — resuelve `DECP-005` e `INV-007`
 
 ---
 
@@ -207,16 +208,16 @@ la diferencia puede deberse a que atienden especialidades distintas, por eso la 
 el mismo Eduardo que figura como administrador con acceso a caja?
 Respuesta abierta: especialidad de Cecilia Portillo Rivero, especialidad de Eduardo Peña, y si
 Eduardo también es administrador.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Los dos atienden Oftalmología. Eduardo Peña es el mismo Eduardo que figura como administrador.
+**Estado:** VALIDADA — volcada a `MOD-015`/`MOD-016`/`MOD-027`
 
 **Q-HCL-008** (Media) — Al ver las consultas anteriores de un paciente, Cecilia prefiere **un
 resumen con opción de ver el detalle** y Eduardo prefiere **el historial completo siempre a la
 vista**. ¿Cómo lo resolvemos?
 Opciones: Resumen con opción de ver el detalle / Historial completo siempre visible / Que cada
 médico elija cómo verlo / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Que cada médico elija cómo verlo.
+**Estado:** VALIDADA — `DEC-HCL-006`
 
 **Q-HCL-009** (Alta para `MOD-002`) — Sobre lo que registran otras especialidades, Cecilia
 respondió que depende del caso y Eduardo que todo debería ser visible para cualquier profesional
@@ -224,23 +225,23 @@ que atienda al paciente. Además, en la Ronda 1 ustedes decidieron que **todo el
 la ficha**. ¿Cuál es la regla?
 Opciones: Todo visible para todos los profesionales (como la ficha) / Cada especialidad ve lo
 suyo, y el médico comparte lo que haga falta / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Cada especialidad ve lo suyo, y el médico comparte lo que haga falta.
+**Estado:** VALIDADA — `DEC-HCL-007`; ver nota sobre la ficha del paciente
 
 **Q-HCL-010** (Baja) — Ustedes y Cecilia pidieron que alergias, cirugías previas y enfermedades
 crónicas estén siempre visibles en la ficha, con un aviso destacado. Eduardo respondió
 "Ninguna". Proponemos mantener el aviso (a quien no lo necesite no le molesta). ¿Confirman?
 Opciones: Sí, se mantiene / No hace falta / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, se mantiene.
+**Estado:** VALIDADA — `DEC-HCL-008`
 
 **Q-CON-005** (Media) — Cecilia dice que la consulta **cambia según la especialidad** y que en
 oftalmología se registran agudeza visual, presión intraocular y opcionalmente ARM. Eduardo dice
 que hay **un formato común** y que no necesita mediciones específicas. ¿Cómo lo resolvemos?
 Opciones: Formato común para todos, con las mediciones de oftalmología como opcionales / Un
 formato por especialidad / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Formato común para todos, con las mediciones de oftalmología como opcionales.
+**Estado:** VALIDADA — `DEC-CON-005`
 
 **Q-DIA-004** (Media) — Sobre el diagnóstico: Cecilia lo registra con **código y texto libre**, y
 necesita marcar si es **presuntivo o confirmado**; Eduardo usa **solo texto libre** y no
@@ -248,8 +249,8 @@ distingue presuntivo. Proponemos que el código y la marca de "presuntivo" exist
 **opcionales**. ¿Está bien así?
 Opciones: Sí, opcionales / El código debe ser obligatorio / Solo texto libre, sin código ni
 presuntivo / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Sí, opcionales.
+**Estado:** VALIDADA — `DEC-DIA-004`
 
 **Q-RET-006** (Media) — En una receta de medicamentos, Cecilia marcó como indispensables también
 **dosis, frecuencia y duración del tratamiento**; Eduardo no. ¿Son obligatorios? Y la opción de
@@ -257,22 +258,22 @@ presuntivo / Otro.
 incluimos como algo opcional?
 Opciones: Dosis, frecuencia y duración obligatorias, y repetir receta opcional / Dosis,
 frecuencia y duración opcionales, y repetir receta opcional / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Dosis, frecuencia y duración obligatorias, y repetir receta opcional.
+**Estado:** VALIDADA — `DEC-RET-004`
 
 **Q-FOR-007** (Alta para `MOD-006`) — Para calcular las fórmulas, Cecilia usa **Treelan** y
 Eduardo respondió **Ampina**. En la Ronda 2 ustedes habían respondido que no usaban ninguno.
 ¿Qué usa cada médico hoy? ¿Y pueden darnos acceso o un ejemplo de cada uno?
 Opciones: Cada uno usa uno distinto (aclarar cuál) / Todos usan los dos / Otro.
 Resuelve `INV-002` e `INV-003`.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Todos usan los dos.
+**Estado:** VALIDADA — `DEC-FOR-003`; `INV-002` e `INV-003` siguen abiertas por falta de material
 
 **Q-FOR-008** (Baja) — Ante la pregunta sobre qué funciona mal de esos sistemas, Eduardo
 respondió "La base de datos. Lente respuesta del proveedor". ¿Qué quiso decir?
 Respuesta abierta.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Quiso decir que las respuestas son lentas: el sistema del proveedor tiene un retardo. Hay que mejorar eso en el sistema nuevo.
+**Estado:** VALIDADA — `DEC-FOR-004`, `RNF-PER-002`
 
 ---
 
@@ -281,15 +282,15 @@ Respuesta abierta.
 **Q-PRY-001** (Alta para aprobar módulos) — ¿Quién aprueba formalmente cada parte del sistema
 antes de que la construyamos? Pacientes ya la aprobó el responsable del proyecto; falta definirlo para las siguientes.
 Opciones: Quien respondió estos cuestionarios / Dirección (indicar quién) / Otro.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Otro: el que está construyendo el sistema (Leonel Alegre).
+**Estado:** VALIDADA — ver `09_Aprobaciones` y `RIE-010`
 
 **Q-DEP-003** (Media) — ¿Quién se ocupa hoy de las computadoras y la conexión a internet de la
 clínica? (Retoma `Q-DEP-002`, que quedó en "no estoy seguro/a".)
 Opciones: Un técnico propio / Un técnico o empresa externa / Nadie en particular / Otro.
 Alimenta: `INV-005`, `INV-006`, `ADR-001`.
-**Respuesta:** —
-**Estado:** ABIERTA
+**Respuesta:** Nadie en particular.
+**Estado:** VALIDADA — volcada a `INV-005`, `INV-006`, `ADR-001`
 
 ---
 
@@ -298,20 +299,26 @@ Alimenta: `INV-005`, `INV-006`, `ADR-001`.
 No son preguntas: es la lista de lo que falta recibir. Tildar lo que se envía.
 
 - [ ] Acceso o ejemplos (capturas de un caso real) de **Treelan** y de **Ampina** — `MOD-006`
-      (`INV-002`, `INV-003`).
+      (`INV-002`, `INV-003`). *Respuesta: de Ampina no hay acceso a las fórmulas, pero se
+      enviará un PDF. De Treelan, nada por ahora.*
 - [ ] **Datos de cada médico**: matrícula, teléfono o email, y días y horarios aproximados.
       Incluir a Cecilia Portillo Rivero y Eduardo Peña, que no estaban en el listado recibido
-      (Arkwright, Coppini, Rivera del Toro) — `MOD-015`.
+      (Arkwright, Coppini, Rivera del Toro) — `MOD-015`. *Respuesta: todavía no; se piden al final.*
 - [ ] **Convenios y planes** que maneja la clínica con cada obra social — `MOD-019` a `MOD-021`.
-- [ ] **Ejemplos de recetas** actuales (medicamentos y anteojos) — `MOD-005`.
+      *Respuesta: todavía no; más adelante.*
+- [ ] **Ejemplos de recetas** actuales (medicamentos y anteojos) — `MOD-005`. *Respuesta: no hay,
+      solo el PDF de fórmulas.*
 - [ ] **Formularios actuales** de alta de paciente y de pedido de turno (papel o digital) —
-      `MOD-001`, `MOD-033`.
+      `MOD-001`, `MOD-033`. *Respuesta: "no tenemos". El PDF que después entregó el secretario es
+      `anexos/sistema_nuevo.pdf`, ya recibido.*
 - [ ] Cómo se maneja hoy **una cirugía**: agenda, checklist, consentimientos — `MOD-013`.
-- [ ] Cómo se maneja hoy **la caja** — `MOD-022` a `MOD-024`.
+      *Respuesta: no hay información; se pide más adelante.*
+- [ ] Cómo se maneja hoy **la caja** — `MOD-022` a `MOD-024`. *Respuesta: no hay información;
+      se resuelve más adelante.*
 - [ ] **Circuitos administrativos** actuales (quién hace qué, desde que llega el paciente hasta
-      que se va) — varios módulos.
+      que se va) — varios módulos. *Respuesta: se especifica más adelante.*
 - [ ] **Planillas o sistema actual**, incluida una exportación de los pacientes a migrar —
-      `MOD-040`.
+      `MOD-040`. *Respuesta: la migración se hace más adelante.*
 
 ---
 
@@ -324,3 +331,26 @@ No son preguntas: es la lista de lo que falta recibir. Tildar lo que se envía.
 | Baja | Q-PAC-056, Q-PAC-061, Q-PAC-063, Q-PAC-065, Q-PAC-066, Q-PAC-067, Q-PAC-069, Q-HCL-010, Q-FOR-008 |
 
 Q-PRY-001 no tiene módulo: es una pregunta transversal de gobierno del proyecto.
+
+## Volcado de respuestas (2026-09-26)
+
+- **Bloque 1:** 15 de 16 preguntas confirman la propuesta. `Q-PAC-064` la corrige y genera
+  [`CR-001`](../00_Gobernanza/control_cambios.md#cr-001). Ver
+  [`../03_Modulos/MOD-001_Pacientes/README.md`](../03_Modulos/MOD-001_Pacientes/README.md).
+- **Bloque 2:** `RN-PAC-011` confirmada; `DECP-005` e `INV-007` resueltas (solo registro, sin
+  liquidaciones).
+- **Bloque 3:** las divergencias entre médicos quedaron resueltas en `decisiones.md` de
+  `MOD-002` a `MOD-006`. Como los dos médicos son oftalmólogos, las diferencias **no** se
+  explican por especialidad: son preferencias personales, por eso varias respuestas las
+  resuelven con opciones configurables u opcionales.
+- **Bloque 4:** quien aprueba los módulos es el responsable del proyecto (`RIE-010`); nadie se
+  ocupa hoy de la infraestructura de la clínica (`INV-005`, `ADR-001`).
+- **Bloque 5:** ningún documento llegó con la Ronda 3. Ver
+  [`documentos_pendientes.md`](documentos_pendientes.md).
+
+**Punto a tener en cuenta:** `Q-HCL-009` ("cada especialidad ve lo suyo") convive con
+`DEC-PAC-013` (todo el personal ve la historia clínica). Se aplica así: la **ficha del paciente**
+(`MOD-001`, incluidos antecedentes y alertas) la ve todo el personal (`Q-PAC-069`); lo que
+registra cada especialidad en la **historia clínica** (`MOD-002`) se rige por `Q-HCL-009`. Qué ve
+recepción de las consultas se pregunta al refinar `MOD-002`. Hoy no tiene efecto práctico:
+todos los médicos son de Oftalmología.

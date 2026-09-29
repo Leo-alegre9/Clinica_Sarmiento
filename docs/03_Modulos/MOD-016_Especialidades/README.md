@@ -20,3 +20,10 @@ respuestas todavía pendientes de `MOD-001`). Ver
 [`../../08_Pendientes/cuestionario_cliente_ronda_2.md#mod-016`](../../08_Pendientes/cuestionario_cliente_ronda_2.md#mod-016).
 Preguntas adicionales (más profundas) se agregarán cuando a este módulo le toque su
 refinamiento completo, uno por vez, según [`../README.md`](../README.md).
+
+## Datos confirmados en la Ronda 3 (2026-09-26)
+
+Los dos médicos que respondieron el cuestionario son de **Oftalmología** (`Q-MED-005`). La
+consulta usa un formato común para todas las especialidades, con campos opcionales propios de
+oftalmología (`DEC-CON-005`), y cada especialidad ve lo que registra en la historia clínica
+(`DEC-HCL-007`).

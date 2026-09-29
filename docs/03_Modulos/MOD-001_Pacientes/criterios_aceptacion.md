@@ -1,9 +1,8 @@
 # MOD-001 — Criterios de aceptación
 
 **Estado:** actualizado el 2026-09-24 para el pase a `LISTO_PARA_VALIDACION`. Todas las historias
-de [`historias_usuario.md`](historias_usuario.md) tienen criterios. Los criterios marcados
-**(hipótesis)** dependen de una pregunta abierta de la Ronda 3; si el cliente responde distinto,
-se ajusta el criterio antes de construir.
+de [`historias_usuario.md`](historias_usuario.md) tienen criterios. Los criterios que dependían de la Ronda 3 quedaron confirmados el 2026-09-26; `CR-001` agregó el
+criterio de derivación en `HU-PAC-001`.
 
 ---
 
@@ -30,7 +29,6 @@ Entonces el sistema debe impedirlo e indicar qué datos faltan.
 ```
 
 ```gherkin
-(hipótesis — Q-PAC-057)
 Dado que ya existe un paciente con DNI 30111222,
 
 Cuando un usuario intenta dar de alta a otro paciente con DNI 30111222,
@@ -64,6 +62,25 @@ Dado que un paciente extranjero presenta un pasaporte,
 Cuando recepción carga el tipo de documento "pasaporte" y su número,
 
 Entonces el sistema debe aceptarlo sin exigir formato de DNI argentino.
+```
+
+```gherkin
+(CR-001)
+Dado que recepción da de alta a un paciente derivado por "Hospital Regional",
+
+Cuando un médico abre su ficha,
+
+Entonces el encabezado debe mostrar la localidad del domicilio y "Derivado por: Hospital
+Regional".
+```
+
+```gherkin
+(CR-001)
+Dado que recepción da de alta a un paciente sin indicar quién lo derivó,
+
+Cuando guarda el alta,
+
+Entonces el sistema debe aceptarla, porque la derivación es opcional.
 ```
 
 ---
@@ -154,7 +171,6 @@ Entonces el sistema debe rechazarla por falta de permiso.
 ```
 
 ```gherkin
-(hipótesis — Q-PAC-062)
 Dado que un paciente activo tiene dos turnos futuros,
 
 Cuando se lo da de baja,
@@ -194,7 +210,6 @@ Entonces el sistema debe rechazarla por falta de permiso.
 ```
 
 ```gherkin
-(hipótesis — Q-PAC-063)
 Dado que un paciente fue marcado como fallecido por error,
 
 Cuando administración revierte el fallecimiento indicando un motivo,
@@ -264,10 +279,10 @@ haberse eliminado ni desvinculado automáticamente.
 
 ---
 
-## HU-PAC-008 — Unificar fichas duplicadas (hipótesis — Q-PAC-054 a Q-PAC-056)
+## HU-PAC-008 — Unificar fichas duplicadas
 
-Fuera del primer incremento de construcción (`DEC-PAC-022`). Se validan estos criterios con el
-cliente antes de construir.
+Confirmados por el cliente el 2026-09-26 (`Q-PAC-054` a `Q-PAC-056`). Se construye en un
+incremento posterior al primero (`DEC-PAC-025`).
 
 ```gherkin
 Dado que la ficha A (código provisorio) y la ficha B (DNI 30111222) son la misma persona,
@@ -310,7 +325,6 @@ ficha, y además una ventana emergente al momento de abrirla.
 ```
 
 ```gherkin
-(hipótesis — Q-PAC-060)
 Dado que recepción carga una alergia a un medicamento en la ficha de un paciente,
 
 Cuando un médico abre esa ficha,
@@ -323,8 +337,8 @@ médico debe poder confirmarla.
 
 ## HU-PAC-010 — Corrección de antecedentes clínicos
 
-Valores tomados de las hipótesis de `Q-PAC-058` (ventana de 24 h, configurable) y `Q-PAC-059`
-(perfil directivo sin límite).
+Valores confirmados en `Q-PAC-058` (ventana de 24 h, configurable) y `Q-PAC-059` (perfil
+directivo sin límite).
 
 ```gherkin
 Dado que un médico cargó un antecedente hace 3 horas,

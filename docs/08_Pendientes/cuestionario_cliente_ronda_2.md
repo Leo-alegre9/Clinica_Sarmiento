@@ -649,7 +649,8 @@ Opciones: Solo Ampina / Solo Treelan / Ambos / Ninguno, se hace en papel / Otro.
 (`Q-FOR-005`), que sí menciona el uso de Treelan para la adición de cerca. El responsable del
 proyecto confirmó directamente que sí lo usan; queda como dato vigente que la clínica **sí usa
 Treelan**, y esta respuesta original del cliente no se toma como válida. Ver `INV-002` en
-[`investigaciones.md`](investigaciones.md).
+[`investigaciones.md`](investigaciones.md). **Actualizado 2026-09-26:** según `Q-FOR-007` (Ronda 3), todos
+usan las dos herramientas, Treelan y Ampina.
 
 **Q-FOR-003** (Media) — ¿Podrían darnos acceso, o una exportación/captura de ejemplo, de ese
 sistema (Ampina/Treelan) para entender qué calcula automáticamente?

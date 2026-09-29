@@ -9,11 +9,11 @@ Revisado el 2026-09-24.
 | MOD-002 — Historia Clínica | Funcional (fuerte) | Cada paciente tiene una historia clínica. Límite acordado: la ficha contiene los antecedentes siempre visibles (alergias, quirúrgicos, crónicos); el contenido de cada atención vive en `MOD-002`/`MOD-003`. |
 | MOD-026 — Usuarios / MOD-027 — Roles y permisos | Funcional (fuerte) | Roles conocidos (`Q-USR-001`): recepción/administrativo, médico, Dirección/administración. `MOD-027` debe permitir asignar los permisos de la [matriz de permisos](reglas_negocio.md#permisos-por-rol-y-acción), incluidos "perfil directivo designado" y "dar de baja pacientes". |
 | MOD-028 — Auditoría | Funcional (fuerte) | Todos los cambios de la ficha, las exportaciones y las descargas de adjuntos se auditan (`RN-PAC-008`, `Q-AUD-001`). |
-| MOD-036 — Configuración general | Funcional (baja) | Parámetro de la ventana de corrección de antecedentes (hipótesis: 24 h, `Q-PAC-058`). |
-| MOD-010 — Turnos | Funcional (media) | Un turno referencia a un paciente. Un paciente inactivo no recibe turnos nuevos (hipótesis `Q-PAC-062`). |
+| MOD-036 — Configuración general | Funcional (baja) | Parámetro de la ventana de corrección de antecedentes (24 h, `Q-PAC-058`). |
+| MOD-010 — Turnos | Funcional (media) | Un turno referencia a un paciente. Un paciente inactivo no recibe turnos nuevos (`Q-PAC-062`). |
 | MOD-011 — Recepción / MOD-012 — Sala de espera | Funcional (baja) | Usan la necesidad especial de atención (`RF-PAC-021`) para priorizar (`Q-ESP-002`). |
 | MOD-014 / MOD-029 / MOD-030 — Recordatorios, notificaciones, WhatsApp | Funcional (media) | Usan teléfono, WhatsApp, canal preferido y opt-out de la ficha (`RF-PAC-009`). |
-| MOD-033 — Solicitud pública de turnos | Funcional (media) | Hipótesis `RN-PAC-011`: la solicitud se vincula a una ficha existente por DNI, pero no crea ni modifica fichas (`Q-PAC-068`). |
+| MOD-033 — Solicitud pública de turnos | Funcional (media) | `RN-PAC-011` (confirmada): la solicitud se vincula a una ficha existente por DNI, pero no crea ni modifica fichas (`Q-PAC-068`). |
 | MOD-007 — Estudios / documentación | Funcional (baja) | Almacenamiento de los archivos adjuntos a la ficha. |
 | MOD-018 — Sedes | Funcional (media) | El paciente es una ficha única compartida entre sedes (`Q-PAC-052`, `Q-SED-001`). |
 | MOD-037 — Backups | No funcional | Los datos de pacientes son parte central de qué se debe respaldar (`RC-011`). |

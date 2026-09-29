@@ -51,6 +51,12 @@ figuran como marco a completar durante el refinamiento de cada módulo y de
 - **RNF-PER-001** — Las operaciones de agenda/turnos y caja, al ser de uso diario intensivo en
   recepción, deben responder en tiempos que no interrumpan la atención presencial. Umbral
   concreto `PENDIENTE_DEFINICION`.
+- **RNF-PER-002** — Las pantallas y consultas de uso diario en la atención (ficha del paciente,
+  historia clínica, cálculos de `MOD-006`) deben responder sin demoras perceptibles. La lentitud
+  es la principal queja sobre las herramientas actuales (Treelan/Ampina: "las respuestas son
+  lentas, tienen un retardo"). Origen: `CLIENTE` (`Q-FOR-008`, Ronda 3, 2026-09-26). *Estado:*
+  CONFIRMADO como necesidad; umbral concreto `PENDIENTE_DEFINICION`. Mientras tanto, se
+  diseña para evitar consultas N+1, paginar listados e indexar las búsquedas.
 
 ## Usabilidad y accesibilidad — `RNF-USA-###`
 

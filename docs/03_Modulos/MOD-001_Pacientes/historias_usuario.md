@@ -2,8 +2,8 @@
 
 **Estado del documento:** actualizado el 2026-09-24 para el pase a `LISTO_PARA_VALIDACION`. Cada
 requerimiento `RF-PAC-###` tiene al menos una historia, y cada historia tiene criterios de
-aceptación en [`criterios_aceptacion.md`](criterios_aceptacion.md). Lo marcado como hipótesis
-(origen `ANÁLISIS`) se pregunta en la Ronda 3 (`Q-PAC-054` a `Q-PAC-069`).
+aceptación en [`criterios_aceptacion.md`](criterios_aceptacion.md). Las hipótesis de trabajo
+quedaron confirmadas en la Ronda 3 (2026-09-26, `Q-PAC-054` a `Q-PAC-069`).
 
 Roles según `Q-USR-001`: recepción/administrativo, médico, Dirección/administración, más el
 permiso de perfil directivo designado (ver
@@ -18,13 +18,13 @@ quiero **registrar un paciente nuevo con su ficha completa**
 para **poder asignarle un turno o iniciar su historia clínica**.
 
 - **Prioridad:** Alta
-- **Requerimiento origen:** RF-PAC-001, RF-PAC-003, RF-PAC-013
+- **Requerimiento origen:** RF-PAC-001, RF-PAC-003, RF-PAC-013, RF-PAC-022 (`CR-001`)
 - **Precondiciones:** el usuario está autenticado (todo el personal puede dar de alta,
   `RF-PAC-014`).
 - **Reglas de negocio relacionadas:** RN-PAC-001, RN-PAC-002
 - **Dependencias:** MOD-019 (obra social, obligatoria en el alta)
 - **Casos excepcionales:** paciente sin DNI (código provisorio interno, `RF-PAC-013`); documento
-  idéntico a otro paciente (se impide y se ofrece abrir la ficha existente, hipótesis
+  idéntico a otro paciente (se impide y se ofrece abrir la ficha existente,
   `Q-PAC-057`); coincidencia de nombre y fecha de nacimiento o de número de afiliado (se advierte
   y se deja continuar, `RF-PAC-003`).
 - **Estado:** RESPONDIDA — lista para criterios de aceptación.
@@ -75,15 +75,15 @@ para **reflejar que ya no se atiende en la clínica sin perder su historia**.
 - **Prioridad:** Media
 - **Requerimiento origen:** RF-PAC-005
 - **Precondiciones:** el paciente existe; el usuario es de Dirección/administración o es un
-  médico con el permiso asignado (hipótesis `Q-PAC-061`).
+  médico con el permiso asignado (`Q-PAC-061`).
 - **Reglas de negocio relacionadas:** RN-PAC-005 (baja siempre lógica, nunca elimina el
   registro)
 - **Dependencias:** MOD-010 (turnos futuros)
 - **Casos excepcionales:** paciente con turnos futuros: el sistema los lista para revisión manual
-  y no los cancela solo; mientras esté dado de baja no se le pueden dar turnos nuevos (hipótesis
-  `Q-PAC-062`).
-- **Estado:** RESPONDIDA — `Q-PAC-013`, `Q-PAC-039` confirmadas; detalle en hipótesis
-  `Q-PAC-061`/`Q-PAC-062`. Ver `CU-PAC-005`.
+  y no los cancela solo; mientras esté dado de baja no se le pueden dar turnos nuevos
+  (`Q-PAC-062`).
+- **Estado:** RESPONDIDA — `Q-PAC-013`, `Q-PAC-039`, `Q-PAC-061` y `Q-PAC-062`
+  confirmadas. Ver `CU-PAC-005`.
 
 ---
 
@@ -100,7 +100,7 @@ revise manualmente**.
 - **Reglas de negocio relacionadas:** RN-PAC-005
 - **Dependencias:** MOD-010 (turnos), MOD-014 (recordatorios): revisión manual, no automática
 - **Casos excepcionales:** ninguna acción automática se dispara; fallecimiento cargado por error
-  (solo administración lo revierte, con motivo, hipótesis `Q-PAC-063`).
+  (solo administración lo revierte, con motivo, `Q-PAC-063`).
 - **Estado:** RESPONDIDA — `Q-PAC-041`, `Q-PAC-042` confirmadas.
 
 ---
@@ -151,12 +151,12 @@ para **que su historia clínica, turnos y pagos queden en un solo lugar**.
 - **Requerimiento origen:** RF-PAC-012
 - **Precondiciones:** existen dos registros del mismo paciente (por ejemplo, uno con código
   provisorio y otro con DNI).
-- **Reglas de negocio relacionadas:** RN-PAC-006 (`PROPUESTO`)
+- **Reglas de negocio relacionadas:** RN-PAC-006
 - **Dependencias:** MOD-002, MOD-010, MOD-022/MOD-023
 - **Casos excepcionales:** antecedentes distintos en cada ficha (se suman); obras sociales
   distintas (se conservan ambas); una de las fichas tiene turnos futuros (pasan a la que queda).
-- **Estado:** ABIERTA — hipótesis completa documentada (`Q-PAC-054` a `Q-PAC-056`). **Fuera del
-  primer incremento de construcción** hasta que el cliente la confirme (`DEC-PAC-022`). Ver
+- **Estado:** RESPONDIDA — confirmada el 2026-09-26 (`Q-PAC-054` a `Q-PAC-056`). Se construye en
+  un incremento posterior al primero (`DEC-PAC-025`). Ver
   `CU-PAC-003`.
 
 ---
@@ -174,7 +174,7 @@ para **atenderlo de forma segura**.
 - **Reglas de negocio relacionadas:** RN-PAC-007
 - **Dependencias:** MOD-002, MOD-003
 - **Casos excepcionales:** alerta cargada por recepción/administración (se muestra igual, marcada
-  "pendiente de revisión médica" hasta que un médico la confirme, hipótesis `Q-PAC-060`); alerta
+  "pendiente de revisión médica" hasta que un médico la confirme, `Q-PAC-060`); alerta
   cargada por error (se corrige según `HU-PAC-010`).
 - **Estado:** RESPONDIDA — el cliente (`Q-PAC-030` a `Q-PAC-032`) y los médicos (`Q-HCL-006`,
   `Q-HCL-007`, 2026-09-24) confirmaron las tres categorías y el aviso destacado. Ver `CU-PAC-004`.
@@ -190,15 +190,15 @@ para **arreglar errores de carga sin perder la trazabilidad**.
 - **Prioridad:** Media
 - **Requerimiento origen:** RF-PAC-018
 - **Precondiciones:** el usuario es médico y el antecedente está dentro de la ventana de
-  corrección (hipótesis: 24 h configurables, `Q-PAC-058`), o el usuario tiene el perfil directivo
-  designado (sin límite de tiempo, hipótesis `Q-PAC-059`).
+  corrección (24 h configurables, `Q-PAC-058`), o el usuario tiene el perfil directivo
+  designado (sin límite de tiempo, `Q-PAC-059`).
 - **Reglas de negocio relacionadas:** RN-PAC-007, RN-PAC-008
 - **Dependencias:** MOD-027 (permiso de perfil directivo), MOD-028 (auditoría), MOD-036
   (parámetro de la ventana)
 - **Casos excepcionales:** médico que intenta corregir fuera de la ventana (se rechaza);
   recepción que intenta modificar o eliminar un antecedente existente (se rechaza).
 - **Estado:** RESPONDIDA — requerimiento surgido de `Q-PAC-037`/`Q-HCL-002`; valor de la ventana
-  y alcance de los directivos en hipótesis.
+  y alcance de los directivos confirmados en `Q-PAC-058`/`Q-PAC-059`.
 
 ---
 
@@ -216,7 +216,7 @@ para **poder avisarle de sus turnos y ubicar a alguien ante una urgencia**.
 - **Casos excepcionales:** WhatsApp igual al teléfono (se carga una sola vez); paciente que no
   quiere comunicaciones salvo el aviso de turno (opt-out).
 - **Estado:** RESPONDIDA — `Q-PAC-026`, `Q-PAC-027`, `Q-PAC-047`, `Q-PAC-048`; opciones de canal
-  en hipótesis `Q-PAC-067`.
+  confirmadas en `Q-PAC-067`.
 
 ---
 
@@ -235,7 +235,7 @@ para **tener la documentación a mano y respaldar el tratamiento de sus datos**.
 - **Casos excepcionales:** paciente que no autoriza el uso de su foto (no se puede cargar
   fotografía, el resto de la ficha sigue igual).
 - **Estado:** RESPONDIDA — `Q-PAC-028`, `Q-PAC-029`, `Q-PAC-045`, `Q-PAC-046`; visibilidad de
-  adjuntos en hipótesis `Q-PAC-069`.
+  adjuntos confirmada en `Q-PAC-069`.
 
 ---
 

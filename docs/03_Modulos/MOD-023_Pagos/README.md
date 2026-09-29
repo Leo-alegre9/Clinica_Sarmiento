@@ -20,3 +20,8 @@ respuestas todavía pendientes de `MOD-001`). Ver
 [`../../08_Pendientes/cuestionario_cliente_ronda_2.md#mod-023`](../../08_Pendientes/cuestionario_cliente_ronda_2.md#mod-023).
 Preguntas adicionales (más profundas) se agregarán cuando a este módulo le toque su
 refinamiento completo, uno por vez, según [`../README.md`](../README.md).
+
+## Respuesta de la Ronda 3 (2026-09-26)
+
+`Q-OSO-004`: en cada atención, recepción elige con qué obra social se registra; viene marcada la
+principal del paciente. No hay liquidación a obras sociales (`Q-OSO-005`, ver `MOD-019`).

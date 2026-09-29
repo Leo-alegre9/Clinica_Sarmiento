@@ -53,7 +53,8 @@ aquí candidatos a revisión futura, a decidir durante el refinamiento de cada u
 
 - `MOD-020` (Planes/coberturas/afiliaciones) y `MOD-021` (Autorizaciones) podrían terminar
   siendo secciones de `MOD-019` (Obras sociales) en lugar de módulos independientes — depende
-  de cuánta complejidad tenga la autorización de prácticas.
+  de cuánta complejidad tenga la autorización de prácticas. Más probable desde el 2026-09-26: el
+  alcance de obras sociales es solo registro, sin liquidaciones (`Q-OSO-005`).
 - `MOD-004` (Diagnósticos) podría integrarse a `MOD-003` (Consultas médicas) si en la práctica
   el diagnóstico siempre se registra dentro de la consulta y no tiene ciclo de vida propio.
 - `MOD-018` (Sedes) **sí requiere un módulo propio**: el cliente confirmó que la clínica ya
@@ -68,12 +69,12 @@ Ninguna fusión se aplica todavía: se decide al refinar cada módulo, con el cl
 
 | ID | Nombre | Estado | Prioridad tentativa | Dependencias principales |
 |---|---|---|---|---|
-| MOD-001 | Pacientes | **APROBADO** (2026-09-24, Leonel Alegre) — hipótesis a confirmar en la Ronda 3 (bloque 1; si se contradicen, CR); unificación de duplicados fuera del primer incremento | Alta | MOD-019 (obra social), MOD-026 (usuarios) |
+| MOD-001 | Pacientes | **APROBADO** (2026-09-24, Leonel Alegre) — hipótesis confirmadas en la Ronda 3 (2026-09-26); `CR-001` agrega "derivado por"; unificación de duplicados en un incremento posterior | Alta | MOD-019 (obra social), MOD-026 (usuarios) |
 | MOD-002 | Historia Clínica | EN_DESCUBRIMIENTO — respuestas de médicos incorporadas 2026-09-15 (`INV-004`) | Alta | MOD-001, MOD-015, MOD-003 |
 | MOD-003 | Consultas Médicas | EN_DESCUBRIMIENTO — respuestas de médicos incorporadas 2026-09-15 (`INV-004`) | Alta | MOD-001, MOD-009, MOD-015 |
 | MOD-004 | Diagnósticos | EN_DESCUBRIMIENTO — respuestas de médicos incorporadas 2026-09-15 (`INV-004`) | Media | MOD-003, MOD-002 |
 | MOD-005 | Recetas / Prescripciones | EN_DESCUBRIMIENTO — respuestas de médicos incorporadas 2026-09-15 (`INV-004`) | Media | MOD-001, MOD-003, MOD-015 |
-| MOD-006 | Fórmulas Oftalmológicas | IDENTIFICADO — bloqueado por INV-001/002/003; confirmado 2026-09-15 que la clínica sí usa Treelan (contradice y desactualiza `Q-FOR-002` del cliente); el 2026-09-24 Eduardo Peña mencionó Ampina (`INV-003` reabierta). Falta acceso/documentación de ambas para avanzar | Media | MOD-001, MOD-003 |
+| MOD-006 | Fórmulas Oftalmológicas | IDENTIFICADO — bloqueado por INV-001/002/003; confirmado 2026-09-15 que la clínica sí usa Treelan (contradice y desactualiza `Q-FOR-002` del cliente); el 2026-09-26 se confirmó que todos usan Treelan y Ampina (`Q-FOR-007`). Falta acceso/documentación de ambas para avanzar (de Ampina llegará un PDF) | Media | MOD-001, MOD-003 |
 | MOD-007 | Estudios / Resultados / Documentación clínica | EN_DESCUBRIMIENTO — respuestas de médicos incorporadas 2026-09-15 (`INV-004`) | Media | MOD-001, MOD-002 |
 | MOD-008 | Evoluciones / Seguimiento del paciente | EN_DESCUBRIMIENTO — respuestas de médicos incorporadas 2026-09-15 (`INV-004`) | Media | MOD-002, MOD-003 |
 | MOD-009 | Agenda Médica | EN_DESCUBRIMIENTO — respuestas de médicos incorporadas 2026-09-15 (`INV-004`) | Alta | MOD-015, MOD-017 |
@@ -86,7 +87,7 @@ Ninguna fusión se aplica todavía: se decide al refinar cada módulo, con el cl
 | MOD-016 | Especialidades | EN_DESCUBRIMIENTO | Alta | — |
 | MOD-017 | Consultorios | EN_DESCUBRIMIENTO | Media | MOD-018 |
 | MOD-018 | Sedes | EN_DESCUBRIMIENTO | **Media** — la clínica ya opera más de una sede hoy, no una sola (`Q-SED-001`, Ronda 2, 2026-09-08); prioridad corregida desde "Baja (hoy 1 sede)" | — |
-| MOD-019 | Obras sociales | EN_DESCUBRIMIENTO | Alta | MOD-001 |
+| MOD-019 | Obras sociales | EN_DESCUBRIMIENTO — alcance: solo registro, sin liquidaciones (`Q-OSO-005`, 2026-09-26) | Alta | MOD-001 |
 | MOD-020 | Planes / coberturas / afiliaciones | EN_DESCUBRIMIENTO | Media | MOD-019 |
 | MOD-021 | Autorizaciones | EN_DESCUBRIMIENTO | Baja/Media | MOD-019, MOD-020 |
 | MOD-022 | Caja | EN_DESCUBRIMIENTO | Alta | MOD-026, MOD-027 |

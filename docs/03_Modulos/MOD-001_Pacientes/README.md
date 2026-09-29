@@ -4,9 +4,9 @@ Nombre:                      Gestión de Pacientes
 Descripción:                 Alta, modificación, baja, búsqueda y consulta de pacientes de la clínica: identificación, datos personales, contacto, cobertura y estado.
 Estado:                      APROBADO (2026-09-24)
 Responsable de validación:   Leonel Alegre (responsable del proyecto)
-Última actualización:        2026-09-24
+Última actualización:        2026-09-26
 Dependencias:                MOD-019 (Obras sociales — asociación paciente↔obra social), MOD-026/MOD-027 (Usuarios y roles — permisos sobre datos del paciente), MOD-002 (Historia clínica — asociada 1:1 a cada paciente)
-Requerimientos relacionados: RF-PAC-001 a RF-PAC-021 (ver requerimientos.md)
+Requerimientos relacionados: RF-PAC-001 a RF-PAC-022 (ver requerimientos.md)
 ```
 
 ## Por qué este módulo se refina primero
@@ -80,8 +80,8 @@ Revisado el 2026-09-24 contra
 3. **Riesgo de privacidad aceptado** (`RIE-PAC-004`): todo el personal ve toda la ficha, por
    decisión explícita del cliente. Tiene que quedar registrado en la aprobación que el riesgo
    fue comunicado.
-4. **Responsable de validación**: Leonel Alegre, responsable del proyecto. `Q-PRY-001` (Ronda 3)
-   sigue abierta para definir quién aprueba los módulos siguientes.
+4. **Responsable de validación**: Leonel Alegre, responsable del proyecto. `Q-PRY-001` (Ronda 3,
+   2026-09-26) confirmó que también aprueba los módulos siguientes.
 
 ## Aprobación
 
@@ -101,8 +101,16 @@ Condiciones de la aprobación:
 3. **Riesgo de privacidad aceptado** (`RIE-PAC-004`): la aprobación incluye, con conocimiento de
    causa, que todo el personal ve toda la ficha.
 
+## Respuestas de la Ronda 3 (2026-09-26)
+
+Respondió Leonel Alegre, responsable del proyecto. De las 16 preguntas del bloque 1, 15 confirman
+la hipótesis tal como estaba escrita y pasan a `CONFIRMADO` (condición 1 de la aprobación).
+`Q-PAC-064` ("procedencia") la corrige: son la localidad **y** quién derivó al paciente, y se
+gestionó como [`CR-001`](../../00_Gobernanza/control_cambios.md#cr-001) (`RF-PAC-022`,
+`DEC-PAC-026`). La unificación de duplicados quedó confirmada y se construye en un incremento
+posterior al primero (`DEC-PAC-025`, reemplaza la condición 2).
+
 ## Siguiente paso
 
-1. Pasar a `EN_CONSTRUCCION`, empezando por lo mínimo de `MOD-027`/`MOD-028` que este módulo
-   necesita (ver [`dependencias.md`](dependencias.md)).
-2. Volcar las respuestas del bloque 1 de la Ronda 3 cuando lleguen (confirmación o CR).
+1. Pasar a `EN_CONSTRUCCION`, empezando por lo mínimo de `MOD-026`/`MOD-027`/`MOD-028` que
+   este módulo necesita (ver [`dependencias.md`](dependencias.md)).

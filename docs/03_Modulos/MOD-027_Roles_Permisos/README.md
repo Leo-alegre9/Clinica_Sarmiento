@@ -21,3 +21,10 @@ respuestas todavía pendientes de `MOD-001`). Ver
 [`../../08_Pendientes/cuestionario_cliente_ronda_2.md#mod-027`](../../08_Pendientes/cuestionario_cliente_ronda_2.md#mod-027).
 Preguntas adicionales (más profundas) se agregarán cuando a este módulo le toque su
 refinamiento completo, uno por vez, según [`../README.md`](../README.md).
+
+## Datos confirmados en la Ronda 3 (2026-09-26)
+
+- Una misma persona puede ser médico y administrador: Eduardo Peña es oftalmólogo y tiene acceso a
+  caja (`Q-MED-005`). Un usuario tiene que poder tener **varios roles**.
+- "Dar de baja pacientes" para médicos y "perfil directivo designado" son permisos que Dirección
+  asigna (`Q-PAC-059`, `Q-PAC-061`, `MOD-001`).

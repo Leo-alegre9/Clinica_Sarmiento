@@ -1,7 +1,7 @@
 # MOD-001 — Diagramas
 
-Actualizados el 2026-09-24 con las respuestas del cliente y de los médicos. Las transiciones o
-pasos marcados **(hipótesis)** dependen de una pregunta abierta de la Ronda 3.
+Actualizados el 2026-09-24 con las respuestas del cliente y de los médicos. Las transiciones que
+dependían de la Ronda 3 quedaron confirmadas el 2026-09-26.
 
 ## Estados del paciente
 
@@ -12,17 +12,17 @@ stateDiagram-v2
     Inactivo --> Activo: Reactivación
     Activo --> Fallecido: Registro de fallecimiento (solo administración)
     Inactivo --> Fallecido: Registro de fallecimiento (solo administración)
-    Fallecido --> Activo: Reversión por error, con motivo (hipótesis Q-PAC-063)
-    Activo --> Fusionado: Unificación (hipótesis Q-PAC-054)
-    Inactivo --> Fusionado: Unificación (hipótesis Q-PAC-054)
+    Fallecido --> Activo: Reversión por error, con motivo (Q-PAC-063)
+    Activo --> Fusionado: Unificación (Q-PAC-054)
+    Inactivo --> Fusionado: Unificación (Q-PAC-054)
     Fusionado --> [*]
 ```
 
 - Ningún estado elimina datos (`RN-PAC-005`). No existe un estado "Bloqueado" aparte: la baja
   lógica cubre ese caso (`Q-PAC-013`).
 - Ni la baja ni el fallecimiento disparan acciones automáticas sobre turnos, recordatorios u
-  obra social (`Q-PAC-041`, hipótesis `Q-PAC-062`).
-- En estado `Inactivo` no se asignan turnos nuevos (hipótesis `Q-PAC-062`).
+  obra social (`Q-PAC-041`, `Q-PAC-062`).
+- En estado `Inactivo` no se asignan turnos nuevos (`Q-PAC-062`).
 
 ## Flujo de alta de paciente en recepción
 
@@ -30,13 +30,13 @@ stateDiagram-v2
 flowchart TD
     A[Recepción busca por DNI, nombre o N.º de afiliado] --> B{¿Existe?}
     B -- Sí --> C[Abrir ficha existente]
-    B -- No --> D[Completar ficha completa: documento o 'sin documento', datos personales, contacto, emergencia, domicilio con localidad, obra social o particular]
+    B -- No --> D[Completar ficha completa: documento o 'sin documento', datos personales, contacto, emergencia, domicilio con localidad, derivado por - opcional, obra social o particular]
     D --> M{¿Menor de 18?}
     M -- Sí --> R[Asociar al menos un responsable]
     M -- No --> K
     R --> K[Registrar consentimiento de datos]
     K --> E{¿Mismo tipo y número de documento que otro paciente?}
-    E -- Sí --> X[Impedir alta y ofrecer abrir la ficha existente - hipótesis Q-PAC-057]
+    E -- Sí --> X[Impedir alta y ofrecer abrir la ficha existente - Q-PAC-057]
     X --> C
     E -- No --> F{¿Coincide nombre + fecha de nacimiento o N.º de afiliado?}
     F -- Sí --> G{¿Recepción confirma que es otra persona?}
